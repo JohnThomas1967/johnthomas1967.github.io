@@ -1,47 +1,107 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
 <head>
-  <title>My first styled page</title>
+  <title>Oh boy! Kibology! My favorite breakfast cereal!</title>
   <style type="text/css">
-  body {
-    padding-left: 11em;
-    font-family: PwFairyTales;
-    font-size: 30px;
-    color: purple;
-    background-color: #d8da3d }
-  ul.navbar {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 2em;
-    left: 1em;
-    width: 9em }
-  h1 {
-    font-family: PWFairyTales}
-  ul.navbar li {
-    background: white;
-    margin: 0.5em 0;
-    padding: 0.3em;
-    border-right: 1em solid black }
-  ul.navbar a {
-    text-decoration: none }
-  a:link {
-    color: blue }
-  a:visited {
-    color: purple }
-  address {
-    margin-top: 1em;
-    padding-top: 1em;
-    border-top: thin dotted }
+$background: linear-gradient(to bottom, #405166 0%,#656f6f 100%);
+$red: #e55643 ;
+$green: #2b9f5e;
+$yellow: #f1c83c;
+$shadow: #533d4a;
+
+html{
+  height: 100%;
+}
+
+body{
+  font-family: 'PWFairyTales', sans-serif;
+  background: $background;
+}
+
+.container{
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: block;
+  position: absolute;
+  max-width: 225px;
+}
+
+.button{
+  float: left;
+  position: relative;
+  bottom: -65px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+  color: $red;
+  text-transform: uppercase;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  
+  span{
+    transform: skew(-10deg);
+    display: block;
+    float: left;
+    text-shadow: $shadow 1px 1px, $shadow 2px 2px, $shadow 3px 3px, $shadow 4px 4px;
+  }
+}
+
+h1{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 42px;
+  margin: 0;
+  line-height: 47px;
+  letter-spacing: 2px;
+}
+
+.title{
+  transform: translateX(-50%) rotate(-10deg);
+  display: block;
+  float: left;
+  left: 50%;
+  position: relative;
+  
+  span {
+    transform: skew(-10deg);
+    display: block;
+    float: left;
+    text-shadow: $shadow 1px 1px, $shadow 2px 2px, $shadow 3px 3px, $shadow 4px 4px, $shadow 5px 5px, $shadow 6px 6px;
+    min-width: 10px;
+    min-height: 10px;
+    position: relative;
+  }
+}
+
+.title{
+  &:nth-child(1){
+    color: $red;
+  }
+  &:nth-child(2){
+    color: $green;
+  }
+  &:nth-child(3){
+    color: $yellow;
+  }
+}
+
     @font-face {font-family: "PWFairyTales"; src: url("PWFairyTales.ttf") format("truetype")}
+
   </style>
 </head>
 
 <body>
-Once upon a time,<br>
-  there wasn't an old man and an old woman.<br>
-  The end.<p>
-  ~Beat Takeshi
+  <section class="container">
+  <h1>
+    <span class="title">Once upon a time,</span>
+    <span class="title"there wasn't an old man and an old woman.</span>
+    <span class="title">The end.</span>
+    <span class="title">~Beat Takeshi</span>
+  </h1>
+  
+  <div class="button">restart</div>
+</section>
+
 </body>
 </html>

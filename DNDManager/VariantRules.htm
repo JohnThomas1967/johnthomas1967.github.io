@@ -1,9 +1,109 @@
-<html>
+<html lang="en-US">
 
   <head>
-    <link href="mystyle.css" rel="stylesheet" type="text/css"> </head>
+    <meta content="text/html" charset="utf-8" http-equiv="content-type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="description" content="2017 Dungeons & Dragons 5th Edition Tabletop Roleplaying Game Manager">
+    <meta name="keywords" content="DnD, Dungeons and Dragons, D&D, Dungeons & Dragons, Fantasy RPG, tabletop roleplaying game, TTRPG">
+    <title>The Dungeons & Dragons i5th Edition Tabletop Fantasy Roleplaying Game JavaScript Manager 2017(Asmor, Zorn, Ren)</title>
+    <script src="WZDragdrop.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="jquery-ui-1.12.1.js"></script>
+    <script src="TouchPunch.js"></script>
 
-  <body>
+    <head>
+      <style>
+        body,
+        html,
+        table {
+          background-image: url(panel.jpg);
+          margin: left;
+        }
+
+        body,
+        table,
+        td,
+        tr {
+          border-style: none;
+          box-shadow: none;
+          font-family: Helvetica;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 200;
+          height: auto;
+          line-height: 18px;
+          text-align: center;
+          text-shadow: .5px .5px .5px #8b0000, .5px .5px .5px #CD0000;
+          vertical-align: top;
+        }
+
+        button,
+        div,
+        input,
+        option,
+        select,
+        textarea {
+          background: rgba(255, 245, 175, 0.2);
+          border-style: none;
+          box-shadow: none;
+          font-family: Helvetica;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 200;
+          height: auto;
+          line-height: 18px;
+          text-align: center;
+          text-shadow: .5px .5px .5px #8b0000, .5px .5px .5px #CD0000;
+          vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+          background: rgba(160, 145, 70, 0.3)
+        }
+
+        tr:nth-child(odd) {
+          background: rgba(230, 215, 135, 0.4)
+        }
+
+        #dragDiv {
+          height: 100px;
+          width: 100px;
+        }
+
+        a:link,
+        a:hover,
+        a:visited,
+        h1 {
+          color: 53170d;
+          font-size: 150%;
+        }
+
+        h2 {
+          color: 53170d;
+          font-size: 145%;
+        }
+
+        h3 {
+          color: 53170d;
+          font-size: 140%;
+        }
+
+        .name {
+          color: 53170d;
+          font-size: 200%;
+        }
+
+        .tabstyle {
+          color: 53170d;
+          font-size: 125%;
+        }
+
+        .noBackgroundTableStyle {
+          background: rgba(0, 0, 0, 0.1);
+        }
+      </style>
+
+      <body>
     <table>
       <tr>
         <td colspan=7>
@@ -20,7 +120,7 @@
       <tr>
         <td>an ability score+1<br>and another ability score+1</td>
         <td>or an ability score+2</td>
-        <td>or an armor upgrade</td>
+        <td>or an armor upgrade<br>or resistance to a damage type<br>or upgrade the resistance to immunity</td>
         <td>a new weapon type+pro,<br>or upgrade a weapon type+pro to weapon type+exp<br>Type1 bludgeoning/slashing<br>Type2 bows<br>Type3 crossbows<br>Type4 grappling<br>Type5 slings<br>Type6 staves/spears<br>Type7 thrown axes/daggers/darts</td>
         <td>or add a new action,<br>or add a new reaction</td>
         <td>or a new feat+pro,<br>or upgrade a feat+pro to a feat+exp,<br>or a new skill,<br>or upgrade a skill+pro to a skill+exp<br>or a new spell,<br>or upgrade a spell+pro to a spell+exp,<br>or an ability to an ability+pro,<br>or upgrade an ability+pro to an ability+exp</td>
@@ -42,7 +142,7 @@
           <td>1d12(min7)+con mod</td>
           <td>AC17 Banded<br>AC18 Splint<br>AC19 Plate<br>AC+1 Shield</td>
           <td>2<br>3</td>
-          <td>Athletics+pro,<br>2 Battle Master Maneuvers,<br>2 Feats,<br>2 Skills</td>
+          <td>Athletics+pro,<br>2 Battle Master Maneuvers/Feats,<br>2 Skills</td>
         </tr>
         <tr>
           <td>Skilled Weapons</td>

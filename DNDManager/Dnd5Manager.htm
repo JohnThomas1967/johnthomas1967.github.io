@@ -611,6 +611,11 @@ Target the character to receive these spells first.
                               a = 'Song of Rest', b = '0d0+0', c = 'during rest, all who hear heal', damageDice = '1d6+0', getAction(t1)
                             }
 
+                            function Abate()
+                            {
+                              a = '(Abate)DC8+' + characters[target].spellAbility + '+pro+focus vsWis 30ft 1 target', b = '0d0+0', c = 'can not take reactions uteoynt', damageDice = '1d6+0', getAction(t1)
+                            }
+
                             function AcidSplash()
                             {
                               a = 'Cantrip(Acid Splash)DC8+' + characters[target].spellAbility + '+pro+focus vsDex 60ft 2 adjac targets', b = '0d0+0', c = 'acid+1d6@5,11,17th lvl', damageDice = '1d6+0', getAction(t1)
@@ -676,9 +681,19 @@ Target the character to receive these spells first.
                               a = '2nd(Beast Sense)Use 1 willing beast s senses; you are blinded and deafened while doing so touch s concentration 1hr', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
                             }
 
+                            function BeckonFamiliar()
+                            {
+                              a = '(Beckon Familiar)1hr ritual, telepathic communication, see and hear through 1 familiar at a time, summon or dismiss, or permanently dismiss the familiar as 1 action, cast touch spells through familiar within 100ft as its reaction, no spell slot cost', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
+                            }
+
                             function BladeWard()
                             {
                               a = 'Cantrip(Blade Ward self 10/10 turns', b = '0d0+0', c = 'resist bludg slash pierc till t e o y n turn', damageDice = '0d0+0', getAction(t1)
+                            }
+
+                            function Bleeding()
+                            {
+                              a = '(Bleeding)DC8+' + characters[target].spellAbility + '+pro+focus vsCon, 1 action, 1 target, 60ft, concentration 10/10 turns', b = '0d0+0', c = 'when target takes dmg+1d8 uteo '+characters[x].name+ 's nt', damageDice = '1d8+0', getAction(t1)
                             }
 
                             function Bless()
@@ -756,6 +771,11 @@ Target the character to receive these spells first.
                               a = '2nd(Continual Flame)touch m', b = '0d0+0', c = 'light no heat or need of oxygen is covered but not smothered or quenched til dispelled', damageDice = '0d0+0', getAction(t1)
                             }
 
+                            function Cripple()
+                            {
+                              a = '(Cripple)DC8+' + characters[target].spellAbility + '+pro+focus vsCon, 1 action, 60ft, 1 target', b = '0d0+0', c = 'target moves 10ft or half its speed whichever is less uteo'+characters[x].name+' s nt', damageDice = '0d0+0', getAction(t1)
+                            }
+
                             function CrownOfMadness()
                             {
                               a = '2nd(Crown of Madness)DC8+' + characters[target].spellAbility + '+pro+focus vsWis 1 target 120ft concentration 10/10 turns', b = '0d0+0', c = 'target melee attacks your choice or acts normally wis saves ateoet', damageDice = '0d0+0', getAction(t1)
@@ -806,6 +826,21 @@ Target the character to receive these spells first.
                               a = '2nd(Detect Thoughts)self concentration 10/10 turns 30ft 1 target Int4 or more learn surface thoughts switch targets)DC8+' + characters[target].spellAbility + '+pro+focus vsWis learn reasoning, emotional state, worries, loves, hates', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
                             }
 
+                            function DireFamiliar()
+                            {
+                              a = '(Dire Familiar)1 action', b = '0d0+0', c = 'familiar temp hp+your witch lvl HP+'+characters[x].lvl+', atks and dmg+your chaMod '+characters[x].chaMod+'', damageDice = '0d0+0', getAction(t1)
+                            }
+
+                            function Discord()
+                            {
+                              a = '(Discord)1 action, 1 target, 60ft, DC8+' + characters[target].spellAbility + '+pro+focus vsWis', b = '0d0+0', c = 'target must atk an adjacent being before moving tteo '+characters[x].name+' s nt', damageDice = '0d0+0', getAction(t1)
+                            }
+
+                            function Disorient()
+                            {
+                              a = '(Disorient)1 action, 1 target, 60ft, DC8+' + characters[target].spellAbility + '+pro+focus vsCon', b = '1d6+0', c = 'atk roll-1d6 before tteo '+characters[x].name+' s nt', damageDice = '0d0+0', getAction(t1)
+                            }
+
                             function DisguiseSelf()
                             {
                               a = '1st(Disguise Self)DC8+' + characters[target].spellAbility + '+pro+focus vsInves self 1hr you change your appearance but not body type such as limb arrangement', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
@@ -813,12 +848,17 @@ Target the character to receive these spells first.
 
                             function DissonantWhispers()
                             {
-                              a = '1st(Dissonant Whispers)1 target)DC8+' + characters[target].spellAbility + '+pro+focus vsWis halves and no fleeing deaf immune 60ft', b = '0d0+0', c = 'psych+1d6/slot and flee', damageDice = '3d6+0', getAction(t1)
+                              a = '1st(Dissonant Whispers)1 target, DC8+' + characters[target].spellAbility + '+pro+focus vsWis halves and no fleeing deaf immune 60ft', b = '0d0+0', c = 'psych+1d6/slot and flee', damageDice = '3d6+0', getAction(t1)
                             }
 
                             function Druidcraft()
                             {
                               a = 'Cantrip(Druidcraft)predict weather, expedite small plant growth, snuff light, harmless sensory effect 3ft s', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
+                            }
+
+                            function Duplicity()
+                            {
+                              a = '(Duplicity)1 action, self, create shadowstuff self, attacker rolls a die and odd number result attacks your duplicate uteo '+characters[x].name+' s nt', b = '0d0+0', c = 'psych+1d6/slot and flee', damageDice = '3d6+0', getAction(t1)
                             }
 
                             function EarthTremor()
@@ -884,6 +924,11 @@ Target the character to receive these spells first.
                             function FogCloud()
                             {
                               a = '1st(Fog Cloud)120ft concentration 1hr', b = '0d0+0', c = '20ft rad+20ft/slot cloud obscures area', damageDice = '0d0+0', getAction(t1)
+                            }
+
+                            function Fortune()
+                            {
+                              a = '(Fortune)1 action, 1 target, 60ft', b = '0d0+0', c = 'ability checks and saving throws at advantage uteo '+characters[x].name+' s nt', damageDice = '0d0+0', getAction(t1)
                             }
 
                             function Friends()
@@ -1316,9 +1361,9 @@ Target the character to receive these spells first.
                               a = '2nd(Spike Growth)20ft radius difficult terrain all take damage every 5ft moved 150ft concentration 10min', b = '0d0+0', c = '', damageDice = '1d4+0', getAction(t1)
                             }
 
-                            function Spiritualweapon()
+                            function SpiritualWeapon()
                             {
-                              a = '2nd(Spiritual weapon)+wis+pro move weapon 20ft and bonus attack 60ft 10/10 turns(10/10)turns', b = '1d20+0', c = 'force+1d8/slot', damageDice = '0d0+0', getAction(t1)
+                              a = '2nd(Spiritual Weapon)+wis+pro move weapon 20ft and bonus attack 60ft 10/10 turns(10/10)turns', b = '1d20+0', c = 'force+1d8/slot', damageDice = '0d0+0', getAction(t1)
                             }
 
                             function WardingBond()
@@ -1909,7 +1954,7 @@ Target the character to receive these spells first.
 
                             function Hallow()
                             {
-                              a = '5th(Hallow 30ft radius protected against celestials, elementals, fey, fiend, and undead; add additional effects; 24hrs touch Till dispelled ', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
+                              a = '5th(Hallow)30ft radius protected against celestials, elementals, fey, fiend, and undead; add additional effects; 24hrs touch Till dispelled ', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
                             }
 
                             function InsectPlague()
@@ -3001,7 +3046,7 @@ Target the character to receive these spells first.
                             s4(s1 + 'PrayerOfHealing' + s2 + 'Prayer of Healing' + s3)
                             s4(s1 + 'ProtectionFromPoison' + s2 + 'Protection from Poison' + s3)
                             s4(s1 + 'Silence' + s2 + 'Silence' + s3)
-                            s4(s1 + 'Spiritualweapon' + s2 + 'Spiritual weapon' + s3)
+                            s4(s1 + 'SpiritualWeapon' + s2 + 'Spiritual Weapon' + s3)
                             s4(s1 + 'WardingBond' + s2 + 'Warding Bond' + s3)
                             s4(s1 + 'ZoneOfTruth' + s2 + 'Zone of Truth' + s3)
                             s4('<h3>3rd Slot</h3>@5th(2)@6th(3)')
@@ -4578,7 +4623,7 @@ Target the character to receive these spells first.
           menuContents += "</td></tr><tr><td>Flaws:<br><textArea cols=30 rows=3 onChange='characters[" + this.index + "].setFlaws(this.value)'>" + this.flaws + "</textArea>";
           menuContents += "</td></tr><tr><td>Ideals:<br><textArea cols=30 rows=3 onChange='characters[" + this.index + "].setIdeals(this.value)'>" + this.ideals + "</textArea>";
           menuContents += "</td></tr><tr><td><h3>Feats:</h3><textArea cols=30 rows=5 onChange='characters[" + this.index + "].setFeats(this.value)'>" + this.feats + "</textArea>";
-          menuContents += "</td></tr></table></td><td><span id=toggled4" + this.index + " style='display:" + this.toggled4 + "'><table width=200px><tr><td><h2>Class:</h2><select onChange='characters[" + this.index + "].setClass(this.value)'><option>" + this.class + "<option>Barbarian, Ancestral Guardian<option>Barbarian, Berserker<option>Barbarian, Storm Herald<option>Barbarian, Totem Warrior<option>Barbarian, Zealot<option>Bard, Glamour<option>Bard, Lore<option>Bard, Satire</option><option>Bard, Swords<option>Bard, Valor<option>Bard, Whispers<option>Cleric, Arcana</option><option>Cleric, Death</option><option>Cleric, Forge<option>Cleric, Grave<option>Cleric, Knowledge<option>Cleric, Life<option>Cleric, Light<option>Cleric, Nature<option>Cleric, Tempest<option>Cleric, Trickery<option>Cleric, War<option>Druid, Dreams<option>Druid, Land<option>Druid, Moon<option>Fighter, Arcane Archer<option>Fighter, Battle Master<option>Fighter, Cavalier<option>Fighter, Champion<option>Fighter, Eldritch Knight<option>Fighter, Samurai<option>Monk, Drunken Master<option>Monk, Four Elements<option>Monk, Kensei<option>Monk, Open Hand<option>Monk, Shadow<option>Monk, Sun Soul<option>Paladin, Ancients<option>Paladin, Crown</option><option>Paladin, Devotion<option>Paladin, Vengence<option>Ranger, Beast Master<option>Ranger, Hunter<option>Ranger, Monster Slayer<option>Rogue, Arcane Trickster<option>Rogue, Assassin<option>Rogue, Mastermind<option>Rogue, Thief<option>Rogue, Swashbuckler<option>Sorcerer, Draconic<option>Sorcerer, Fire<option>Sorcerer, Storm<option>Sorcerer, Wild<option>Warlock, Archfey<option>Warlock, Fiend<option>Warlock, Great Old Ones<option>Warlock, Undying<option>Wizard, Abjurer<option>Wizard, Conjurer<option>Wizard, Diviner<option>Wizard, Enchanter<option>Wizard, Evoker<option>Wizard, Illusionist<option>Wizard, Necromancer<option>Wizard, Transmuter</select>";
+          menuContents += "</td></tr></table></td><td><span id=toggled4" + this.index + " style='display:" + this.toggled4 + "'><table width=200px><tr><td><h2>Class:</h2><select onChange='characters[" + this.index + "].setClass(this.value)'><option>" + this.class + "<option>Barbarian, Ancestral Guardian<option>Barbarian, Berserker<option>Barbarian, Storm Herald<option>Barbarian, Totem Warrior<option>Barbarian, Zealot<option>Bard, Glamour<option>Bard, Lore<option>Bard, Satire</option><option>Bard, Swords<option>Bard, Valor<option>Bard, Whispers<option>Cleric, Arcana</option><option>Cleric, Death</option><option>Cleric, Forge<option>Cleric, Grave<option>Cleric, Knowledge<option>Cleric, Life<option>Cleric, Light<option>Cleric, Nature<option>Cleric, Tempest<option>Cleric, Trickery<option>Cleric, War<option>Druid, Dreams<option>Druid, Land<option>Druid, Moon<option>Fighter, Arcane Archer<option>Fighter, Battle Master<option>Fighter, Cavalier<option>Fighter, Champion<option>Fighter, Eldritch Knight<option>Fighter, Samurai<option>Monk, Drunken Master<option>Monk, Four Elements<option>Monk, Kensei<option>Monk, Open Hand<option>Monk, Shadow<option>Monk, Sun Soul<option>Paladin, Ancients<option>Paladin, Crown</option><option>Paladin, Devotion<option>Paladin, Vengence<option>Ranger, Beast Master<option>Ranger, Hunter<option>Ranger, Monster Slayer<option>Rogue, Arcane Trickster<option>Rogue, Assassin<option>Rogue, Mastermind<option>Rogue, Thief<option>Rogue, Swashbuckler<option>Sorcerer, Draconic<option>Sorcerer, Fire<option>Sorcerer, Storm<option>Sorcerer, Wild<option>Warlock, Archfey<option>Warlock, Fiend<option>Warlock, Great Old Ones<option>Warlock, Undying</option><option>Witch, White Magic</option><option>Witch, Black Magic</option><option>Wizard, Abjurer<option>Wizard, Bladesinger</option><option>Wizard, Conjurer<option>Wizard, Diviner<option>Wizard, Enchanter<option>Wizard, Evoker<option>Wizard, Illusionist<option>Wizard, Necromancer</option><option>Wizard, Theurgist<option>Wizard, Transmuter</select>";
           menuContents += "<br><input onChange='characters[" + this.index + "].setClass(this.value)' placeHolder='other class' size=30 type='text'>";
           menuContents += "</td></tr><tr><td>Challenge Rating(CR)or Level(lvl):<input maxLength=3 onChange='characters[" + this.index + "].setLevel(this.value)' size=3 type='text' value=" + this.level + ">";
           menuContents += "</td></tr><tr><td>Class Features:<br>Target the character to receive the spells here. Make notes in Features Notes: below.<p><color='red'>" + this.features + "</color>";
@@ -4833,6 +4878,38 @@ Target the character to receive these spells first.
         function _setClass(x)
         {
           this.class = x;
+
+          if (this.class.match(/Witch/))
+          {
+            this.setEquipment('whip and blowgun.or light crossbow 20/20 bolts.or simple weapon.component pouch.or a totem.scholar s pack.or dungeoneer s pack.leather armor.any simple weapon.dagger');
+            if (this.class.match(/White Magic/))
+            {
+              A = "@2nd(Spells)<br><b onClick='Bless()'>Bless</b><br><b onClick='CureWounds()'>Cure Wounds</b></td></tr><tr><td>@3rd(Remedy)1/1, short rest recharge, 1 action, 60ft, heal 1d10+your witch level</td></tr><tr><td>@3rd(Hex Spells)<br><b onClick='LesserRestoration()'>Lesser Restoration</b><br><b onClick='SpiritualWeapon()'>Spiritual Weapon</b></td></tr><tr><td>@4th(Hex Spells)<br><b onClick='DeathWard()'>Death Ward</b><br><b onClick='GuardianOfFaith()'>Guardian of Faith</b></td></tr><tr><td>@5th(Hex Spells)<br><b onClick='Hallow()'>Hallow</b><br><b onClick='RaiseDead()'>Raise Dead</b>";
+              B = '@6th(Talisman of Protection)1 at a time, a being AC+2 with no shield, save+1d4';
+              C = '@10th(Benevolent Surge)1 reaction, you, or your familiar, or your ally takes dmg, regain 1d10+chaMod HP, 1/1 short rest recharge';
+              D = '@14th(Witch s Gift)when healed by you, a being gains AC+3 uteoynt';
+            }
+            if (this.class.match(/Black Magic/))
+            {
+              A = "@2nd(Hex Spells)<br><b onClick='GentleRepose()'>Gentle Repose</b><br><b onClick='MagicWeapon()'>Magic Weapon</b></td></tr><tr><td>@3rd(Agony)60ft, conSave or concentration at disadvantage, atboit roll a die, on odd number, target attacks at disadvantage</td></tr><tr><td>@3rd(Hex Spells)<br><b onClick='AnimateDead()'>Animate Dead</b><br><b onClick='VampiricTouch()'>Vampiric Touch</b></td></tr><tr><td>@4th(Hex Spells)<br><b onClick='Blight()'>Blight</b><br><b onClick='DeathWard()'>Death Ward</b></td></tr><tr><td>@5th(Hex Spells)<br><b onClick='Cloudkill()'>Cloudkill</b><br><b onClick='Contagion()'>Contagion</b>";
+              B = '@6th(Voodoo Doll)60ft, 10/10 turns, target the doll, the target takes 1/2 dmg, target saves at disadvantage if you have the target s har or its item attached to the doll';
+              C = '@10th(Share Pain)1/1, short rest recharge, target a being to take your dmg on a failed cha Save';
+              D = '@14th(Disrupt Life)1 action, 1 spell slot, 20ft radius you target con save for half damage or 1d10 necrotic per spell slot+your chaMod';
+            }
+            this.setFeatures("</td></tr><tr><td>@1st(Spellcasting)<br>@1st(Hexes)2 Cantrips, and opt to replace 1 hex for another when leveling up<br><b onClick='FalseLife()'>False Life</b><br><b onClick='InflictWounds()'>Inflict Wounds</b></td></tr><tr><td>@1st(Witch s Curse)<p>(Hideous)save vs your fright spells at disadvantage, 1 target Wis Save or frightened utteoint<p>or (Hollow)when target is reduced to 0HP, you gain temp HP witch lvl+chaMod<p>or (Possessed)learn +1 1st level witch spell, 4th, 8th, 12th, and 16th which do not count against your known spells</td></tr><tr><td>@2nd(Cackle)1 bonus action, 60ft, spell time+1 round</td></tr><tr><td>@2nd(Familiar)1 bonus action, your familiar can reaction attack or cast</td></tr><tr><td>" + A + "</td></tr><tr><td>@4th(Ability Score Improvement)<br>@4th<br>@8th<br>@12th<br>@16th<br>@19th</td></tr><tr><td>" + B + "</td></tr><tr><td>@7th(Improved Familiar)your familiar concentrates your spell</td></tr><tr><td>@9th(Cauldron)Alchemy Points<br>@9th 3<br>@12th 4<br>@15th 5<br>@18th 6<br>1AP 1 potion of Animal Friendship, or Healing, or Poison<br>@13th 2AP 1 potion Heroism and Mind Reading, Philters of Love<br>24hr potency</td></tr><tr><td>@11th(Grand Hex)@11th 1<br>@15th 2<br>@18th 3<br><b onClick='Abate()'>Abate</b><br><b onClick='BeckonFamiliar()'>Beckon Familiar</b><br><b onClick='Bleeding()'>Bleeding</b><br><b onClick='CharmPerson()'>Charm</b><br><b onClick='Cripple()'>Cripple</b><br><b onClick='DireFamiliar()'>Dire Familiar</b><br><b onClick='Discord()'>Discord</b><br><b onClick='DisguiseSelf()'>Disguise</b><br><b onClick='Disorient()'>Disorient</b><br><b onClick='Duplicity()'>Duplicity</b><br><b onClick='Fear()'>Evil Eye</b><br><b onClick='Fortune()'>Fortune</b><br><b onClick='GoUnseen()'>Go Unseen</b><br><b onClick='Hesitate()'>Hesitate</b><br><b onClick='Mire()'>Mire</b><br><b onClick='Misfortune()'>Misfortune</b><br><b onClick='Nails()'>Nails</b><br><b onClick='Obfuscate()'>Obfuscate</b><br><b onClick='Pestilence()'>Pestilence</b><br><b onClick='Ruin()'>Ruin</b><br><b onClick='Slumber()'>Slumber</b><br><b onClick='Telepathy()'>Telepathy</b><br><b onClick='Tremors()'>Tremors</b><br><b onClick='Ward()'>Ward</b><p>(Grand Hexes)<br><b onClick='Coven()'>Coven</b><br><b onClick='DualHex()'>Dual Hex</b><br><b onClick='InsidiousHex()'>Insidious Hex</b><br><b onClick='IntoAToad()'>IntoAToad</b><br><b onClick='RemoteHex()'>Remote Hex</b><br><b onClick='SlowDeath()'>Slow Death</b><br><b onClick='WeaveOfFate()'>Weave of Fate</b><br><b onClick='WitchsBroom()'>Witch s Broom</b><br><b onClick='WitchsHut()'>Witch s Hut</b></td></tr><tr><td>" + C + "</td></tr><tr><td>" + D + "</td></tr><tr><td>@20th(Hex Master)targets save vs your hexes at disadvantage");
+            this.setHitDice(this.level + 'd8+' + (parseInt(this.level) * parseInt(this.conMod)));
+            this.setProficiencies('light armor, simple weapons, blowguns, shortswords, whips');
+            this.setSaving('wis+pro, cha+pro');
+            this.setStrPro('');
+            this.setDexPro('');
+            this.setConPro('');
+            this.setIntPro('');
+            this.setWisPro('pro');
+            this.setChaPro('pro');
+            this.setSkills('2 from Arcana, Deception, Insight, Intimidation, Persuasion, Nature, Religion');
+            this.setSpellAbility('cha');
+          }
+
           if (this.class.match(/Barbarian/))
           {
             this.setEquipment('greataxe or martial melee weapon.2 handaxes or simple weapon.explorer pack.4/4 javelins');
@@ -4975,7 +5052,7 @@ Target the character to receive these spells first.
             if (this.class.match(/Life/))
             {
               A = '@1st.BONUS PROFICIENCY heavy armor</td></tr><tr><td>@1st DISCIPLE OF LIFE heal+2+spell lvl</td></tr><tr><td>@1st[x]Bless</td></tr><tr><td>@1st[x]1st Cure Wounds</td></tr><tr><td>@2nd.PRESERVE LIFE 1CD, 1act , 30ft heal 5xLvl allies max half maxhp, less undead and constructs';
-              B = '@3rd[x]Lesser Restoration<br>@3rd[x]Spiritual weapon';
+              B = '@3rd[x]Lesser Restoration<br>@3rd[x]Spiritual Weapon';
               C = '@5th[x]Beacon of Hope<br>@5th[x]Revivify</td></tr><tr><td>@6th.BLESSED HEALER when healing, you heal 2+spell lvl</td></tr><tr><td>@7th[x]Death Ward<br>@7th[x]Guardian of Faith</td></tr><tr><td>@8th.DIVINE STRIKE 1/turn weapon dam+1d8 radiant<br>@14th +2d8)</td></tr><tr><td>@9th[x]Mass Cure Wounds<br>@9th[x]Raise Dead';
               D = '@17th.SUPREME HEALING heal max roll';
             }
@@ -5010,7 +5087,7 @@ Target the character to receive these spells first.
             if (this.class.match(/War/))
             {
               A = "@1st(Bonus Proficiencies)<br>martial weapons<br>heavy armor</td></tr><tr><td>@1st(War Priest)when attacking 1 bonus attack</td></tr><tr><td>@1st<br><b onClick='DivineFavor()'>Divine Favor</b><br><b onClick='ShieldOfFaith()'>Shield of Faith</b></td></tr><tr><td>2nd(Guided Strike)1CD attack+10";
-              B = "@3rd<br><b onClick='MagicWeapon()'>Magic Weapon</b><br><b onClick='Spiritualweapon()'>Spiritual weapon</b>";
+              B = "@3rd<br><b onClick='MagicWeapon()'>Magic Weapon</b><br><b onClick='SpiritualWeapon()'>Spiritual Weapon</b>";
               C = "@5th<br><b onClick='CrusadersMantle()'>Crusader s Mantle</b><br><b onClick='SpiritGuardians()'>Spirit Guardians</b></td></tr><tr><td>@6th(War God s Blessing)1CD ally 30ft attack+10</td></tr><tr><td>@7th<b onClick='FreedomOfMovement()'>Freedom of Movement</b><br><b onClick='Stoneskin()'>Stoneskin</b></td></tr><tr><td>@8th(Divine Strike)1/turn weapon damage+1d8 same damage type<br>@14th+2d8</td></tr><tr><td>@9th<br><b onClick='FlameStrike()'>Flame Strike</b><br><b onClick='HoldMonster()'>Hold Monster</b>";
               D = "@17th(Avatar of Battle)resist bludg, slash, pierc nonmagical weapon";
             }
@@ -5214,9 +5291,9 @@ Target the character to receive these spells first.
             {
               A = "@3rd(Channel Divinity: Champion Challenge)<br>1CD,chosen targets within 30ft save vsWis or targets must stay within 30ft of you<p>@3rd(Channel Divinity: Turn the Tide)<br>1CD,1bonus,hearing allies with half or fewer HP within 30ft heal 1d6+chaMod</td></tr><tr><td>@3rd(Oath of the Crown Spells)<br><b onClick='Command()'>Command</b><br><b onClick='CompelledDuel()'>Compelled Duel</b>";
               B = "@5th(Oath of the Crown Spells)<br><b onClick='WardingBond()'>Warding Bond</b><br><b onClick='ZoneOfTruth()'>Zone of Truth</b>";
-              C = "@7th(Divine Allegiance)1 reaction,you take the damage an adjacent ally would take";
+              C = "@7th(Divine Allegiance)<br>1 reaction,you take the damage an adjacent ally would take";
               D = "@13th(Oath of the Crown Spells)<br><b onClick='Banishment()'>Banishment</b><br><b onClick='GuardianOfFaith()'>Guardian of Faith</b>";
-              E = "@15th(Unyielding Spirit)save vs Paralysis or Stun at advantage</td></tr><tr><td>@17th(Oath of the Crown Spells)<br><b onClick='CircleOfPower()'>Circle of Power</b><br><b onClick='Geas()'>Geas</b></td></tr><tr><td>@20th(Exalted Champion)1 action, resist bludgeon, piercing, slashing dmg from non-magical weapons, allies within 30ft save vs Death at advantage, you and allies within 30ft wis save at advantage, recharge on long rest";
+              E = "@15th(Unyielding Spirit)<br>save vs Paralysis or Stun at advantage</td></tr><tr><td>@17th(Oath of the Crown Spells)<br><b onClick='CircleOfPower()'>Circle of Power</b><br><b onClick='Geas()'>Geas</b></td></tr><tr><td>@20th(Exalted Champion)<br>1 action, resist bludgeon, piercing, slashing dmg from non-magical weapons, allies within 30ft save vs Death at advantage, you and allies within 30ft wis save at advantage, recharge on long rest";
             }
             if (this.class.match(/Devotion/))
             {
@@ -5234,7 +5311,7 @@ Target the character to receive these spells first.
               D = '@13th[x]Banishment<br>@13th[x]Dimension Door';
               E = '@15th.SOUL OF VENGEANCE while Vow of Enmity, react melee attack</td></tr><tr><td>@17th[x]Hold Monster<br>@17th[x]Scrying</td></tr><tr><td>@20th.AVENGING ANGEL (1/1)1hr , fly at speed 60ft, 30ft radius aura wis save or frightened attacked at advantage';
             }
-            this.setFeatures('<table><tr><td>@1st(Divine Sense)<br>60ft aura detect celestial, fiend, undead, Hallow spell desecrated consecrated places or objects, til teoynt, (1+chaMod/1+chaMod)long rest</td></tr><tr><td>@1st(Lay on Hands)<br>touch less undead and constructs heal from a pool of 5xLvl points(6/6)long rest, 5 pool points/cure 1 disease or neutralize 1 poison</td></tr><tr><td>@2nd(Fighting Style)<br>(Defense)while armored AC+1<p>or (Dueling)1h weapon damage+2<p>or (Great Weapon Fighting)re-roll damage on 1 or 2<p>or (Protection)with shield adjacent allies attacked at disadvantage</td></tr><tr><td>@2nd(Divine Smite)after melee hit spend 1 slot damage+2d8 radia+1d8/slot max 5d8 +1d8 if fiend or undead<br>@(11th +1d8radiant)</td></tr><tr><td>@3rd(Divine Health)<br>immune disease</td></tr><tr><td>@3rd(Channel Divinity)(1/1)short rest</td></tr><tr><td>' + A + '</td></tr><tr><td>@4th(Ability Score Improvement)<br>@4th<br>@8th<br>@12th<br>@16th<br>@19th</td></tr><tr><td>@5th(Extra Attack)</td></tr><tr><td>' + B + '</td></tr><tr><td>@6th(Aura of Protection)you and allies save+chaMod<br>@6th 10ft<br>@18th 30ft</td></tr><tr><td>' + C + '</td></tr><tr><td>@10th(Aura of Courage)you and allies immune fright<br>@10th 10ft<br>@18th 30ft</td></tr><tr><td>' + D + '</td></tr><tr><td>@14th(Cleansing Touch)1 or chaMod/1 or chaMod long rest end 1 spell on you or ally</td></tr><tr><td>' + E);
+            this.setFeatures('<table><tr><td>@1st(Divine Sense)<br>60ft aura detect celestial, fiend, undead, Hallow spell desecrated consecrated places or objects, til teoynt, (1+chaMod/1+chaMod)long rest</td></tr><tr><td>@1st(Lay on Hands)<br>touch less undead and constructs heal from a pool of 5xLvl points(6/6)long rest, 5 pool points/cure 1 disease or neutralize 1 poison</td></tr><tr><td>@2nd(Fighting Style)<p>(Defense)while armored AC+1<p>or (Dueling)1h weapon damage+2<p>or (Great Weapon Fighting)re-roll damage on 1 or 2<p>or (Protection)with shield adjacent allies attacked at disadvantage</td></tr><tr><td>@2nd(Divine Smite)<br>after melee hit spend 1 slot damage+2d8 radia+1d8/slot max 5d8 +1d8 if fiend or undead<br>@(11th +1d8radiant)</td></tr><tr><td>@3rd(Divine Health)<br>immune disease</td></tr><tr><td>@3rd(Channel Divinity)(1/1)short rest</td></tr><tr><td>' + A + '</td></tr><tr><td>@4th(Ability Score Improvement)<br>@4th<br>@8th<br>@12th<br>@16th<br>@19th</td></tr><tr><td>@5th(Extra Attack)</td></tr><tr><td>' + B + '</td></tr><tr><td>@6th(Aura of Protection)you and allies save+chaMod<br>@6th 10ft<br>@18th 30ft</td></tr><tr><td>' + C + '</td></tr><tr><td>@10th(Aura of Courage)<br>you and allies immune fright<br>@10th 10ft<br>@18th 30ft</td></tr><tr><td>' + D + '</td></tr><tr><td>@14th(Cleansing Touch)1 or chaMod/1 or chaMod long rest end 1 spell on you or ally</td></tr><tr><td>' + E);
             this.setEquipment('martial weapon and shield or 2 martial weapons.5/5 javelins or simple melee weapon.priest pack or explorer pack.chain mail.holy symbol');
             this.setHitDice(this.level + 'd10+' + (parseInt(this.level) * parseInt(this.conMod)));
             this.setProficiencies('all armor, shields, and all weapons');
@@ -5267,7 +5344,7 @@ Target the character to receive these spells first.
             if (this.class.match(/Monster Slayer/))
             {
               A = "@3rd(Monster Slayer Magic)<br><b onClick='ProtectionFromEvilOrGood()'>Protection from Evil or Good</b></td></tr><tr><td>@3rd(Hunter s Sense)1act , 60ft, 1target, learn immunities, resistances, vulnerabilities, race unless hidden from divination magic</td></tr><tr><td>@3rd(Slayer s Prey)bonus, 1target, 60ft, your 1st attack each turn extra 1d6 dmg";
-              B = "@5th(Monster Slayer Magic)<br><b onClick='ZoneOfTruth()'>Zone of Truth</b></td></tr><tr><td>@7th(Supernatural Defense)you save+1d6 versus your Slayer s Prey@9th(Monster Slayer Magic)<br><b onClick='MagicCircle()'>Magic Circle</b></td></tr><tr><td>";
+              B = "@5th(Monster Slayer Magic)<br><b onClick='ZoneOfTruth()'>Zone of Truth</b></td></tr><tr><td>@7th(Supernatural Defense)<br>you save+1d6 versus your Slayer s Prey@9th(Monster Slayer Magic)<br><b onClick='MagicCircle()'>Magic Circle</b></td></tr><tr><td>";
               C = "@11th(Magic-User s Nemesis)thwart spell or thwart teleport within 60ft DC8+your spell ability+pro vsWis, recharge short rest";
               D = "@13th(Monster Slayer Magic)<br><b onClick='Banishment()'>Banishment</b></td></tr><tr><td>@15th(Slayer s Counter)1react, Slayer s Prey forces your saving throw, make attack before making saving throw, a hit is also a save success"
             }
@@ -5431,6 +5508,11 @@ Target the character to receive these spells first.
             A = '@2nd.ABJURATION SAVANT gold, time 1/2 copying abjuration spells</td></tr><tr><td>@2nd.ARCANE WARD when casting abjuration, self ward hp 2 x lvl+intMod, cast another abjuration, ward heals 2 x spell lvl';
             B = '@6th.PROJECTED WARD ward ranged 30ft for an ally</td></tr><tr><td>@10th.IMPROVED ABJURATION abjuration spell ability checks+pro</td></tr><tr><td>@14th.SPELL RESISTANCE save at advantage vs spells, resist spell damage';
           }
+          if (this.class.match(/Bladesinger/))
+          {
+            A = "@2nd(Bladesinging)light armor+pro, 1h melee weapon+pro, Performance+pro</td></tr><tr><td>@2nd(Bladesong)while no heavy or medium armor or shield or 2h weapon, 1 bonus action, 10/10 turns, AC+intMod, Speed+10ft, Dex and Acrobatics at advantage, concentration save con+intMod";
+            B = '@6th(Extra Attack)attack twice when you take an attack action</td></tr><tr><td>@10th(Song of Defense)during your Bladesong, heal 5x1 spell slot level when expending the slot</td></tr><tr><td>@14th(Song of Victory)during your Bladesong, melee weapon+intMod dmg';
+          }
           if (this.class.match(/Conjurer/))
           {
             A = '@2nd.CONJURATION SAVANT gold and time is halved copying conjuration spells</td></tr><tr><td>@2nd.MINOR CONJURATION 1 10lb 3ft cubebed object within 10ft till 1hr or damaged';
@@ -5461,6 +5543,11 @@ Target the character to receive these spells first.
             a = '2nd.NECROMANCY SAVANT gold and time is halved copying necromancy spells</td></tr><tr><td>@2nd.GRIM HARVEST cast and kill, heal 2 x spell lvl, 3 x if Necromantic spell';
             B = '@6th.UNDEAD THRALLS learn Animate Dead+1 undead hp+your lvl, dam+your pro</td></tr><tr><td>@10th.INJURED TO UNDEATH resist necrotic, hp max never reduced</td></tr><tr><td>@14th.COMMAND UNDEAD 1 undead 60ft cha save or obeys, undead int 8+save at advantage reroll/hr'
           }
+          if (this.class.match(/Theurgist/))
+          {
+            A = "@2nd(Divine Inspiration)Choose a Cleric Domain and deity</td></tr><tr><td>@2nd(Arcane Initiate)when gaining a Wizard level, you can opt to replace a new learned Wizard spell for a Cleric Domain spell of the same spell level, other Wizards can not copy your Cleric Domain spells into their spell books</td></tr><tr><td>@2nd(Channel Arcana)@2nd 1/1<br>@6th 2/2<br>@18th 3/3<br>sort rest recharge<p>(Divine Arcana)1 bonus action, say prayer spell attack+2 or DC+2<p>(Channel Divinity)";
+            B = "@6th(Arcane Acolyte)you gain the Cleric Domain 1st level benefits except weapon and armor proficiencies</td></tr><tr><td>@10th(Arcane Priest)you gain your Cleric Domain 6th level benefits</td></tr><tr><td>@14th(Arcane High Priest)you gain your Cleric Domain 17th level benefits"
+          }
           if (this.class.match(/Transmuter/))
           {
             A = '@2nd.TRANSMUTATION SAVANT gold and time is halved copying transmutation spells</td></tr><tr><td>@2nd.MINOR ALCHEMY transmute 1ft cube of objects 1 hour';
@@ -5468,7 +5555,7 @@ Target the character to receive these spells first.
           }
           if (this.class.match(/Wizard/))
           {
-            this.setFeatures('@<table><tr><td>1st.ARCANE RECOVERY (1/1)short rest, recover 1/2lvl rnd up in 6th lvl or fewer slots</td></tr><tr><td>' + A + '</td></tr><tr><td>@4th.ABILITY SCORE IMPROVEMENT<br>@4th<br>@8th<br>@12th<br>@16th<br>@19th</td></tr><tr><td>' + B + '</td></tr><tr><td>@18th.SPELL MASTERY cast a known 1st and 2nd(lvl spell at no 1st cost, 8hrss change the know spells</td></tr><tr><td>@20th.SIGNATURE SPELLS cast 2 known 3rd lvl spells at no 3rd cost');
+            this.setFeatures('<table><tr><td>1st(Arcane Recovery)<br>1/1 recharge after short rest, recover 1/2lvl rnd up in 6th lvl or fewer slots</td></tr><tr><td>' + A + '</td></tr><tr><td>@4th(Ability Scorre Improvement)<br>@4th<br>@8th<br>@12th<br>@16th<br>@19th</td></tr><tr><td>' + B + '</td></tr><tr><td>@18th(Spell Mastery)cast a known 1st and 2nd(lvl spell at no 1st cost, 8hrs change the know spells</td></tr><tr><td>@20th(Signature Spells)cast 2 known 3rd lvl spells at no 3rd cost');
             this.setEquipment('quarterstaff or dagger.component pouch or arcane focus.scholar pack or explorer pack.spellbook');
             this.setHitDice(this.level + 'd6+' + (parseInt(this.level) * parseInt(this.conMod)));
             this.setProficiencies('daggers, darts, light crossbows, quarterstaffs, and slings');

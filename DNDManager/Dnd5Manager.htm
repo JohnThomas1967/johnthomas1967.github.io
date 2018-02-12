@@ -946,6 +946,11 @@ Target the character to receive these spells first.
                               a = '1st(Goodberry)Create 10 berries to eat 1 berry for 1 hp and nourishment for 1 day; berries lose potency after 24h touch m', b = '0d0+0', c = 'heal', damageDice = '0d0+1', getAction(t1)
                             }
 
+                            function GoUnseen()
+                            {
+                              a = '(Go Unseen)1 action, you and your familiar become invisible', b = '0d0+0', c = 'invisible uteoynt or you or your familiar attack', damageDice = '0d0+0', getAction(t1)
+                            }
+
                             function Grease()
                             {
                               a = '1st(Grease)DC8+' + characters[target].spellAbility + '+pro+focus vsDex 60ft 10/10 turns', b = '0d0+0', c = 'Prone all targets who enter or finish a turn in the area dex save', damageDice = '0d0+0', getAction(t1)
@@ -983,7 +988,12 @@ Target the character to receive these spells first.
 
                             function HellishRebuke()
                             {
-                              a = '1st(Hellish Rebuke)reaction when hit)DC8+' + characters[target].spellAbility + '+pro+focus vsDex for half 60ft', b = '0d0+0', c = 'fire+1d10/slot', damageDice = '2d10+0', getAction(t1)
+                              a = '1st(Hellish Rebuke)reaction when hit, DC8+' + characters[target].spellAbility + '+pro+focus vsDex for half 60ft', b = '0d0+0', c = 'fire+1d10/slot', damageDice = '2d10+0', getAction(t1)
+                            }
+
+                            function Hesitate()
+                            {
+                              a = '(Hesitate)1 action, 1 target, 60ft, DC8+' + characters[target].spellAbility + '+pro+focus vsWis', b = '0d0+0', c = 'target can move or attack but not both during its turn uteo '+characters[x].name+' s nt', damageDice = '2d10+0', getAction(t1)
                             }
 
                             function Hex()
@@ -1116,9 +1126,19 @@ Target the character to receive these spells first.
                               a = '2nd(Melf s Acid Arrow)90ft' + characters[target].spellAbility + '+pro', b = '1d20+0', c = 'on miss half damage acid+1d4/slot +2d4+1d4/slot ateofin turn', damageDice = '4d4+0', getAction(t1)
                             }
 
+                            function Mire()
+                            {
+                              a = '(Mire)1 action, 30ft, ground becomes swamp difficult terrain 1/2 speed, you move without penalty', b = '0d0+0', c = 'fire+1d10/slot', damageDice = '2d10+0', getAction(t1)
+                            }
+
                             function MirrorImage()
                             {
                               a = '2nd(Mirror Image self 10/10 turns 3 clones d20 6+ 1 clone AC10+dex destroyed 8+ another clone 10; the last clone blindsight truesight immune', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
+                            }
+
+                            function Misfortune()
+                            {
+                              a = '(Misfortune)1 action, 1 target, 60ft, DC8+' + characters[target].spellAbility + '+pro+focus vsWis', b = '1d6+0', c = 'ability checks and saving throws-1d6 uteo '+characters[x].name+' s nt', damageDice = '0d0+0', getAction(t1)
                             }
 
                             function MistyStep()
@@ -1131,9 +1151,24 @@ Target the character to receive these spells first.
                               a = '2nd(Moonbeam)5ft radius 40ft high dim light area moveable up to 60ft/turn)DC8+' + characters[target].spellAbility + '+pro+focus vsCon 120ft concentration 1min', b = '0d0+0', c = 'radiant+1d10/slot', damageDice = '2d10+0', getAction(t1)
                             }
 
+                            function Nails()
+                            {
+                              a = '(Nails)1 attack and 1 bonus attack, unarmed strikes+1d4 magical dmg', b = '0d0+0', c = '', damageDice = '1d4+0', getAction(t1)
+                            }
+
                             function NystulsMagicAura()
                             {
-                              a = '2nd(Nystul s Magic Aura touch 24hrs recast 30days til dispelled', b = '0d0+0', c = 'False Aura object or being magic appears nonmagic vs versa change school appearance *or Mask being appears as different alignment or racial type', damageDice = '0d0+0', getAction(t1)
+                              a = '2nd(Nystul s Magic Aura)touch 24hrs recast 30days til dispelled', b = '0d0+0', c = 'False Aura object or being magic appears nonmagic vs versa change school appearance *or Mask being appears as different alignment or racial type', damageDice = '0d0+0', getAction(t1)
+                            }
+
+                            function Obfuscate()
+                            {
+                              a = '(Obfuscate)1 action, 20ft radius sphere cloud, self', b = '0d0+0', c = 'obscured terrain uteoynt or 10mi>wind', damageDice = '0d0+0', getAction(t1)
+                            }
+
+                            function Pestilence()
+                            {
+                              a = '(Pestilence)1 action, 5ft radius sphere poison cloud around you that follows you, all targets that enter or start turn in cloud, DC8+' + characters[target].spellAbility + '+pro+focus vsCon', b = '0d0+0', c = 'poisoned uteo '+characters[x].name+' s nt', damageDice = '0d0+0', getAction(t1)
                             }
 
                             function PassWithoutTrace()
@@ -1194,6 +1229,11 @@ Target the character to receive these spells first.
                             function RopeTrick()
                             {
                               a = '2nd(Rope Trick)touch 1hr', b = '0d0+0', c = '60ft rope rises up to extradimensional space for you and 7 allies you can see out 3x5ft window', damageDice = '0d0+0', getAction(t1)
+                            }
+
+                            function Ruin()
+                            {
+                              a = '(Ruin)1 action, 1 target, 60ft, DC8+' + characters[target].spellAbility + '+pro+focus vsCon', b = '0d0+0', c = 'AC-4 to a max of 10 uteo '+characters[x].name+' s nt', damageDice = '0d0+0', getAction(t1)
                             }
 
                             function ScorchingRay()
@@ -1266,6 +1306,11 @@ Target the character to receive these spells first.
                               a = '1st(Sleep 90ft 10/10 turns', b = '0d0+0', c = '20ft radius 5d8+2d8/slot lowest hp targets sleep til slapped or damage undead immune', damageDice = '0d0+0', getAction(t1)
                             }
 
+                            function Slumber()
+                            {
+                              a = '(Slumber)1 action, 1 target, 60ft, DC8+' + characters[target].spellAbility + '+pro+focus vsWis', b = '0d0+0', c = 'target sleeps until slapped or damaged or uteo '+characters[x].name+' s nt', damageDice = '0d0+0', getAction(t1)
+                            }
+
                             function SpareTheDying()
                             {
                               a = 'Cantrip(Spare the Dying)touch', b = '0d0+0', c = 'being with 0hp becomes stable less undead and constructs', damageDice = '0d0+0', getAction(t1)
@@ -1279,6 +1324,11 @@ Target the character to receive these spells first.
                             function TashasHideousLaughter()
                             {
                               a = '1st(Tasha s Hideous Laughter)DC8+' + characters[target].spellAbility + '+pro+focus vsWis', b = '0d0+0', c = 'prone laughing wis save each eointurn or after each damage', damageDice = '0d0+0', getAction(t1)
+                            }
+
+                            function Telepathy()
+                            {
+                              a = '1 any language knowning target, 60ft', b = '0d0+0', c = 'communicate telepathically', damageDice = '0d0+0', getAction(t1)
                             }
 
                             function TensorsFloatingDisk()
@@ -1306,6 +1356,11 @@ Target the character to receive these spells first.
                               a = '1st(Thunderwave)DC8+' + characters[target].spellAbility + '+pro+focus vsCon for half 15ft cube', b = '0d0+0', c = 'thunder+1d8/slot and targets pushed 10ft', damageDice = '2d8+0', getAction(t1)
                             }
 
+                            function Tremors()
+                            {
+                              a = '(Tremors)1 action, 30ft radius, chosen targets, DC8+' + characters[target].spellAbility + '+pro+focus vsDex, ', b = '0d0+0', c = 'knocked prone and can not rise until teo '+characters[x].name+' s nt', damageDice = '0d0+0', getAction(t1)
+                            }
+
                             function TrueStrike()
                             {
                               a = 'Cantrip(True Strike 30ft concentration 10/10 turns your next turn 1st attac at advantage', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
@@ -1319,6 +1374,11 @@ Target the character to receive these spells first.
                             function ViciousMockery()
                             {
                               a = 'Cantrip(Vicious Mockery 1 target)DC8+' + characters[target].spellAbility + '+pro+focus vsWis 60ft', b = '0d0+0', c = 'pysch+1d4@5,11,17th lvl next roll at disadvantage', damageDice = '1d4+0', getAction(t1)
+                            }
+
+                            function Ward()
+                            {
+                              a = '(Ward)1 ally, 60ft', b = '0d0+0', c = 'resistance to bludgeoning, piercing, slashing, non-magical weapons uteo '+characters[x].name+' s nt', damageDice = '0d0+0', getAction(t1)
                             }
 
                             function WitchBolt()

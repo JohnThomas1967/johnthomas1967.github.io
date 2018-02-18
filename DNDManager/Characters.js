@@ -201,8 +201,8 @@ pc2477.setCurNinthSlot(0)
 pc2477.setDamageConditions('')
 add(pc2477)
 //End of Kyra
-//Nerys
-pc8033=new Character('Nerys','pc')
+//Merisiel
+pc8033=new Character('Merisiel','pc')
 pc8033.addRoll('Dagger+dex+pro 20/60ft','1d20+0','piercing+dex','1d4+0')
 pc8033.addRoll('Rapier+dex+pro','1d20+0','piercing+dex','1d8+0')
 pc8033.addRoll('5th lvl Sneak Attack at advantage or adjacent ally','0d0+0','extra damage','3d6+0')
@@ -291,7 +291,7 @@ pc8033.setCurEighthSlot(0)
 pc8033.setCurNinthSlot(0)
 pc8033.setDamageConditions('')
 add(pc8033)
-//End of Nerys
+//End of Merisiel
 //Valeros
 pc1583=new Character('Valeros','pc')
 pc1583.addRoll('1 Handed Longsword+str+pro','1d20+0','slashing+str Dueling Bonus','1d8+2')

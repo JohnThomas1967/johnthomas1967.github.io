@@ -75,33 +75,29 @@ body {
 
  @font-face {font-family: "PWFairyTales"; src: url("PWFairyTales.ttf") format("truetype")}
 
-.animated-hover {
-	position: relative;
-	display: inline-block;
+.outer {
+  height: 300px;
+  width: 300px;
+  border: 1px solid #000;
 }
-
-.animated-hover:hover .edit {
-	display: block;
-}
-
-.edit {
-	padding-top: 7px;	
-	padding-right: 7px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	display: none;
+.inner {
+  height: 100px;
+  width: 100px;
+  margin: 100px;
 }
   
   </style>
  
 </head>
-
+	
 <body>
-	<div class='animated-hover'>
-		<img src='Gab.jpeg'>
-		<div class='edit'><a href='https://gab.ai/JohnTitorX'>Gab.Ai</a><i class='hover-icon'></i></a></div>
-	</div>
+	
+<div class='outer'>
+ <div class='inner'>
+  Follow me on Gab.Ai
+    <img src='Gab.jpeg'>
+  </div>
+</div>
   
   &nbsp;&nbsp;<a href='https://www.tumblr.com/blog/johnthomas1967'>Tumblr</a> 
   

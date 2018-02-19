@@ -85,9 +85,6 @@ a:active
 
  @font-face {font-family: "PWFairyTales"; src: url("PWFairyTales.ttf") format("truetype")}
 
-.inner:img {
-  display: none
-}
 .inner:hover img {
   display: block;
 }  
@@ -97,12 +94,11 @@ a:active
 	
 <body>
 	
-<div class='inner'>
-  <a href='https://gab.ai/JohnTitorX'>Follow me on Gab.</a>
-  <img src='Gab.png' style='display:none'>
+<a href='https://gab.ai/JohnTitorX'>Follow me on Gab.</a>
+  <img class='inner' src='Gab.png' style='display:none'>
 	
-  <a href='https://www.tumblr.com/blog/johnthomas1967'>Follow me on Tumblr.</a>
-  <img src='Gab.png' style='display:none'>	
+  <a class='inner' href='https://www.tumblr.com/blog/johnthomas1967'>Follow me on Tumblr.</a>
+  <img class='inner' src='Gab.png' style='display:none'>	
 </div>
 
 <div class="fade"></div>

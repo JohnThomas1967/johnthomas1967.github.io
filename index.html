@@ -86,16 +86,16 @@ a:active
  @font-face {font-family: "PWFairyTales"; src: url("PWFairyTales.ttf") format("truetype")}
 
 .outer {
-  height: 300px;
-  width: 300px;
-  border: 1px solid #000;
 }
 .inner {
-  height: 100px;
-  width: 100px;
-  margin: 100px;
 }
-  
+
+.inner:img {
+  display: none
+}
+.inner:hover img {
+  display: block;
+}  
   </style>
  
 </head>

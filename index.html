@@ -75,11 +75,36 @@ body {
 
  @font-face {font-family: "PWFairyTales"; src: url("PWFairyTales.ttf") format("truetype")}
 
+.animated-hover {
+	position: relative;
+	display: inline-block;
+}
+
+.animated-hover:hover .edit {
+	display: block;
+}
+
+.edit {
+	padding-top: 7px;	
+	padding-right: 7px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: none;
+}
+  
   </style>
  
 </head>
 
 <body>
+	<div class='animated-hover'>
+		<img src='Gab.jpeg'>
+		<div class='edit'><a href='https://gab.ai/JohnTitorX'>Gab.Ai</a><i class='hover-icon'></i></a></div>
+	</div>
+  
+  &nbsp;&nbsp;<a href='https://www.tumblr.com/blog/johnthomas1967'>Tumblr</a> 
+  
 <div class="fade"></div>
 
 <section class="star-wars">

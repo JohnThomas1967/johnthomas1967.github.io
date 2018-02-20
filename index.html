@@ -103,15 +103,17 @@ a:active,
 	img { width: 100%; height: auto; }
 	  }
 	  
-	  .typewriter h1 {
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
 
 /* The typing effect */
@@ -123,7 +125,7 @@ a:active,
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: orange }
 }
 
   </style>
@@ -131,12 +133,12 @@ a:active,
 </head>
 	
 <body>
-<div style='opacity:0.4;text-align;center'>
+<div class='typewriter' style='opacity:0.4;text-align;center'>
 <audio controls autoplay>
   <source src='Nattvasen.mp3' type='audio/mpeg'>
   Your browser does not support the audio element.
 </audio>
-	<p><font class='typewriter'>They were friendly creatures.<p>This is my home now.</font>
+	<h1>They were friendly creatures. This is my home now.</h1>
 	</div>
 <div class="fade"></div>
 

@@ -4616,11 +4616,11 @@ Target the character to receive these spells first.
           menuContents += "</td></tr><tr><td>Take damage?<input maxLength=4 onChange='characters[" + this.index + "].setdamage(this.value)'size=4 type='text'>";
           menuContents += "Heal up?<input maxLength=4 onChange='characters[" + this.index + "].setHealing(this.value)'size=4 type='text'>";
           menuContents += "</td></tr><tr><td>Damage Conditions:<br><textArea cols=30 rows=2 onChange='characters[" + this.index + "].setDamageConditions(this.value)'placeHolder='ac-1, str+1, ini+3, blinded'>" + this.damageConditions + "</textArea>";
-          menuContents += "</td></tr><tr><td><h2>Race:</h2><select onChange='characters[" + this.index + "].setRace(this.value)'><option>" + this.race + "<option>Dragonborn<option>Dwarf, Gray<option>Dwarf, Hill<option>Dwarf, Mountain<option>Elf, Dark<option>Elf, Half<option>Elf, High<option>Elf, Moon<option>Elf, Wood<option>Gnome, Deep<option>Gnome, Forest<option>Gnome, Rock<option>Halfling, Lightfoot<option>Halfling, Stout<option>Human<option>Orc, Half<option>Tiefling</select>";
+          menuContents += "</td></tr><tr><td><h2>Race:</h2><select onChange='characters[" + this.index + "].setRace(this.value)'><option>" + this.race + "<option>Aasimar, Fallen</option><option>Aasimar, Protector</option><option>Aasimar, Scourge</option><option>Dragonborn<option>Dwarf, Gray<option>Dwarf, Hill<option>Dwarf, Mountain<option>Elf, Dark<option>Elf, Half<option>Elf, High<option>Elf, Moon<option>Elf, Wood<option>Gnome, Deep<option>Gnome, Forest<option>Gnome, Rock<option>Halfling, Lightfoot<option>Halfling, Stout<option>Human<option>Orc, Half<option>Tiefling</select>";
           menuContents += "<br><input onChange='characters[" + this.index + "].setRace(this.value)' placeHolder='other race' size=30 type='text'>";
           menuContents += "</td></tr><tr><td>Racial Abilility Increases:<br><input onChange='characters[" + this.index + "].setAbility(this.value)' size=30 value='" + this.ability + "'>";
           menuContents += "</td></tr><tr><td>Racial Languages:<br><input onChange='characters[" + this.index + "].setLanguages(this.value)' size=30 type='text' value='" + this.languages + "'>";
-          menuContents += "</td></tr><tr><td>Racial Proficiencies:<br><input onChange='characters[" + this.index + "].setProficienciesRace(this.value)' size=30 value='" + this.proficienciesRace + "'>";
+          menuContents += "</td></tr><tr><td>Racial Proficiencies:<br><textArea cols=30 rows=2 onChange='characters[" + this.index + "].setProficienciesRace(this.value)'>" + this.proficienciesRace + "</textarea>";
           menuContents += "</td></tr><tr><td>Traits:<br><textArea cols=30 rows=3 onChange='characters[" + this.index + "].setTrait(this.value)'placeHolder='Gender, Age, Color, Height, Personality, Weight'>" + this.trait + "</textarea>";
           menuContents += "</td></tr><tr><td>Alignment:<br><select onChange='characters[" + this.index + "].setAlignment(this.value)'><option>" + this.alignment + "<option>Lawful Good<option>Lawful Neutral<option>Lawful Evil<option>Neutral Good<option>Neutral<option>Neutral Evil<option>Chaotic Good<option>Chaotic Neutral<option>Chaotic Evil<option>Unaligned</select>";
           menuContents += "</td></tr><tr><td>Equipment:<br><textArea cols=30 rows=15 onChange='characters[" + this.index + "].setEquipment(this.value)'>" + this.equipment + "</textArea>";
@@ -6868,6 +6868,30 @@ Target the character to receive these spells first.
         function _setRace(x)
         {
           this.race = x;
+          if (this.race.match(/Aasimar/))
+          {
+            this.setLanguages('Common, Celestial');
+            this.setResistance('necrotic, radiant');
+            this.setSenses('Darkvision 60ft');
+            this.setSize('Medium 5x5ft');
+            this.setSpeed('30ft');
+            this.setTrait('60-160yrs old');
+          if (this.race.match(/Protector/))
+          {
+            this.setAbility('wis+1,cha+2');
+            this.setProficienciesRace('Healing Hands:1/1 long rest,heal self or ally lvl in hp,Light cha,Radiant Soul:@3rd fly 30ft 1min,deal your lvl extra radiant dmg 1 target each turn,1/1 long rest');
+          }
+          if (this.race.match(/Scourge/))
+          {
+            this.setAbility('con+1,cha+2');
+            this.setProficienciesRace('Healing Hands:1/1 long rest,heal self or ally lvl in hp,Light cha,Radiant Consumption:@3rd lvl,1act,1min or 1bonus act end,10ft rad bright light and 10ft dim light chosen targets take your lvl radiant dmg each turn');
+          }
+          if (this.race.match(/Fallen/))
+          {
+            this.setAbility('str+1,cha+2');
+            this.setProficienciesRace('Healing Hands:1/1 long rest,heal self or ally lvl in hp,Light cha,Necrotic Shroud:@3rd targets 10ft radius cha vsCha or frightened uteoynt, deal extra necrotic dmg to 1 target per turn,1min or 1 bonus end 1/1 long rest');
+          }
+          }
           if (this.race.match(/Dragonborn/))
           {
             this.setAbility('str+2, cha+1');

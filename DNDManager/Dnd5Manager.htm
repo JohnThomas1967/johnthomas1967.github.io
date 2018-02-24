@@ -1133,7 +1133,7 @@ Target the character to receive these spells first.
 
                             function MirrorImage()
                             {
-                              a = '2nd(Mirror Image self 10/10 turns 3 clones d20 6+ 1 clone AC10+dex destroyed 8+ another clone 10; the last clone blindsight truesight immune', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
+                              a = '2nd(Mirror Image)self 10/10 turns 3 clones d20 6+ 1 clone AC10+dex destroyed 8+ another clone 10; the last clone blindsight truesight immune', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
                             }
 
                             function Misfortune()
@@ -1909,7 +1909,7 @@ Target the character to receive these spells first.
 
                             function DominatePerson()
                             {
-                              a = '5th(Dominate Person)1 humanoid)DC8+' + characters[target].spellAbility + '+pro+focus vsCon or charmed, follows telepathic commands, for complete control; +SL for dur 60ft concentration 10/10 turns ', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
+                              a = '5th(Dominate Person)1 humanoid DC8+' + characters[target].spellAbility + '+pro+focus vsCon or charmed, follows telepathic commands, for complete control; +SL for dur 60ft concentration 10/10 turns ', b = '0d0+0', c = '', damageDice = '0d0+0', getAction(t1)
                             }
 
                             function Dream()
@@ -5113,7 +5113,7 @@ Target the character to receive these spells first.
             {
               A = '@1st.BONUS PROFICIENCY heavy armor</td></tr><tr><td>@1st DISCIPLE OF LIFE heal+2+spell lvl</td></tr><tr><td>@1st[x]Bless</td></tr><tr><td>@1st[x]1st Cure Wounds</td></tr><tr><td>@2nd.PRESERVE LIFE 1CD, 1act , 30ft heal 5xLvl allies max half maxhp, less undead and constructs';
               B = '@3rd[x]Lesser Restoration<br>@3rd[x]Spiritual Weapon';
-              C = '@5th[x]Beacon of Hope<br>@5th[x]Revivify</td></tr><tr><td>@6th.BLESSED HEALER when healing, you heal 2+spell lvl</td></tr><tr><td>@7th[x]Death Ward<br>@7th[x]Guardian of Faith</td></tr><tr><td>@8th.DIVINE STRIKE 1/turn weapon dam+1d8 radiant<br>@14th +2d8)</td></tr><tr><td>@9th[x]Mass Cure Wounds<br>@9th[x]Raise Dead';
+              C = '@5th[x]Beacon of Hope<br>@5th[x]Revivify</td></tr><tr><td>@6th.BLESSED HEALER when healing, you heal 2+spell lvl</td></tr><tr><td>@7th[x]Death Ward<br>@7th[x]Guardian of Faith</td></tr><tr><td>@8th(Divine Strike)1/turn weapon dam+1d8 radiant<br>@14th +2d8)</td></tr><tr><td>@9th[x]Mass Cure Wounds<br>@9th[x]Raise Dead';
               D = '@17th.SUPREME HEALING heal max roll';
             }
             if (this.class.match(/Light/))
@@ -5127,7 +5127,7 @@ Target the character to receive these spells first.
             {
               A = '@1st.ACOLYTE OF NATURE 1 cantrip, 2 skills+pro from Animal Handling, Nature, Survival</td></tr><tr><td>@1st.BONUS PROFICIENCY heavy armor</td></tr><tr><td>@1st[x]Animal Friendship<br>@1st[x]Speak with Animals</td></tr><tr><td>@2nd.CHARM ANIMALS AND PLANTS 1CD, 30ft wis save charmed 10/10 turns or damaged';
               B = '@3rd[x]Barkskin<br>@3rd[x]Spike Growth</td></tr><tr><td>@5th[x]Plant Growth';
-              C = '@5th[x]Wind Wall</td></tr><tr><td>@6th.DAMPEN ELEMENTS you or ally 30ft rad, react, resist acid, cold, lighting or thunder</td></tr><tr><td>@7th[x]Dominate Beast<br>@7th[x]Grasping Vine</td></tr><tr><td>@8th.DIVINE STRIKE 1/turn weapon dam+1d8 cold, fire or lightning.(@14th)+2d8</td></tr><tr><td>@9th[x]Insect Plague<br>@9th[x]Tree Stride';
+              C = '@5th[x]Wind Wall</td></tr><tr><td>@6th.DAMPEN ELEMENTS you or ally 30ft rad, react, resist acid, cold, lighting or thunder</td></tr><tr><td>@7th[x]Dominate Beast<br>@7th[x]Grasping Vine</td></tr><tr><td>@8th(Divine Strike)1/turn weapon dam+1d8 cold, fire or lightning.(@14th)+2d8</td></tr><tr><td>@9th[x]Insect Plague<br>@9th[x]Tree Stride';
               D = '@17th.MASTER OF NATURE bonus command the charmed animals and plants';
             }
             if (this.class.match(/Tempest/))
@@ -5139,10 +5139,10 @@ Target the character to receive these spells first.
             }
             if (this.class.match(/Trickery/))
             {
-              A = '@1st.BLESSINGS OF THE TRICKSTER ally stealth at advantage 1hr </td></tr><tr><td>@1st[x]Charm Person<br>@1st[x]Disguise Self</td></tr><tr><td>@2nd.INVOKE DUPLICITY 1CD concentration 10/10 turns bonus move 30ft attack at advantage';
-              B = '@3rd[x]Mirror Image<br>@3rd[x]Pass without Trace';
-              C = '@5th[x]Blink<br>@5th[x]Dispel magic</td></tr><tr><td>@6th.CLOAK OF SHADOWS 1CD invisible till t e o y n turn or attack or cast</td></tr><tr><td>@7th[x]Dimension Door<br>@7th[x]Polymorph</td></tr><tr><td>@8th.DIVINE STRIKE 1/turn weapon damage+1d8poision.(@14th)+2d8</td></tr><tr><td>@9th[x]Dominate Person<br>@9th[x]Modify Memory';
-              D = '@17th.IMPROVED DUPLICITY move 4 clones 30ft/turn max 120ft</td></tr><tr><td>';
+              A = "@1st(Blessings of the Trickster)ally stealth at advantage 1hr </td></tr><tr><td>@1st<b onClick='CharmPerson()'>Charm Person</b><br>@1st<b onClick='DisguiseSelf()'>Disguise Self</b></td></tr><tr><td>@2nd(Invoke Duplicity)1CD concentration 10/10 turns bonus move 30ft attack at advantage";
+              B = "@3rd<b onClick='MirrorImage()'>Mirror Image</b><br>@3rd<b onClick='PassWithoutTrace()'>Pass without Trace</b>";
+              C = "@5th<b onClick='Blink()'>Blink</b><br>@5th<b onClick='DispelMagic()'>Dispel Magic</b></td></tr><tr><td>@6th(Cloak of Shadows) 1CD invisible till t e o y n turn or attack or cast</td></tr><tr><td>@7th<b onClick='DimensionDoor()'>Dimension Door</b><br>@7th<b onClick='Polymorph()'>Polymorph</b></td></tr><tr><td>@8th(Divine Strike)1/turn weapon damage+1d8poision.(@14th)+2d8</td></tr><tr><td>@9th<b onClick='DominatePerson()'>Dominate Person</b><br>@9th<b onClick='ModifyMemory()'>Modify Memory</b>";
+              D = '@17th(Improved Duplicity)move 4 clones 30ft/turn max 120ft</td></tr><tr><td>';
             }
             if (this.class.match(/War/))
             {
@@ -5368,7 +5368,7 @@ Target the character to receive these spells first.
               A = '@3rdABJURE ENEMY 1act , 1CD, 60ft wis save for half speed or frightened speed 0, fiends and undead at disadvantage</td></tr><tr><td>@3rdVOW OF ENMITY bonus, 1 target, 10ft, 1CD, attack at advantage, 10/10 turns </td></tr><tr><td>@3rd[x]Bane<br>@3rd[x]Hunter s Mark';
               B = '@5th[x]Hold Person<br>@5th[x]Misty Step';
               C = '@7th.RELENTLESS AVENGER while opportunity attacking, move half speed, immune opportunity attacked</td></tr><tr><td>@9th[x]Haste<br>@9th[x]Protection from Energy';
-              D = '@13th[x]Banishment<br>@13th[x]Dimension Door';
+              D = "@13th[x]Banishment<br>@13th<b onClick='DimensionDoor()'>Dimension Door</b>";
               E = '@15th.SOUL OF VENGEANCE while Vow of Enmity, react melee attack</td></tr><tr><td>@17th[x]Hold Monster<br>@17th[x]Scrying</td></tr><tr><td>@20th.AVENGING ANGEL (1/1)1hr , fly at speed 60ft, 30ft radius aura wis save or frightened attacked at advantage';
             }
             this.setFeatures('<table><tr><td>@1st(Divine Sense)<br>60ft aura detect celestial, fiend, undead, Hallow spell desecrated consecrated places or objects, til teoynt, (1+chaMod/1+chaMod)long rest</td></tr><tr><td>@1st(Lay on Hands)<br>touch less undead and constructs heal from a pool of 5xLvl points(6/6)long rest, 5 pool points/cure 1 disease or neutralize 1 poison</td></tr><tr><td>@2nd(Fighting Style)<p>(Defense)while armored AC+1<p>or (Dueling)1h weapon damage+2<p>or (Great Weapon Fighting)re-roll damage on 1 or 2<p>or (Protection)with shield adjacent allies attacked at disadvantage</td></tr><tr><td>@2nd(Divine Smite)<br>after melee hit spend 1 slot damage+2d8 radia+1d8/slot max 5d8 +1d8 if fiend or undead<br>@(11th +1d8radiant)</td></tr><tr><td>@3rd(Divine Health)<br>immune disease</td></tr><tr><td>@3rd(Channel Divinity)(1/1)short rest</td></tr><tr><td>' + A + '</td></tr><tr><td>@4th(Ability Score Improvement)<br>@4th<br>@8th<br>@12th<br>@16th<br>@19th</td></tr><tr><td>@5th(Extra Attack)</td></tr><tr><td>' + B + '</td></tr><tr><td>@6th(Aura of Protection)you and allies save+chaMod<br>@6th 10ft<br>@18th 30ft</td></tr><tr><td>' + C + '</td></tr><tr><td>@10th(Aura of Courage)<br>you and allies immune fright<br>@10th 10ft<br>@18th 30ft</td></tr><tr><td>' + D + '</td></tr><tr><td>@14th(Cleansing Touch)1 or chaMod/1 or chaMod long rest end 1 spell on you or ally</td></tr><tr><td>' + E);
@@ -5426,10 +5426,10 @@ Target the character to receive these spells first.
           {
             if (this.class.match(/Arcane/))
             {
-              A = '@3rdMAGE HAND LEGERDEMAIN 30ft stow retreive object or pick locks or disarm traps';
-              B = '@9th.MAGICAL AMBUSH when hidden, target saves at disadvantage vs your spell';
-              C = '@13th.VERSATILE TRICKSTER bonus, 30ft attack at advantage target';
-              D = '@17th.SPELL THIEF (1/1)react, spell dc vs your spell dc or negate and steal spell cast with your slots for 8hrss';
+              A = '@3rd(Mage Hand Legerdemain)30ft stow retreive object or pick locks or disarm traps';
+              B = '@9th(Magical Ambush)when hidden, target saves at disadvantage vs your spell';
+              C = '@13th(Versatile Trickster)bonus, 30ft attack at advantage target';
+              D = '@17th(Spell Thief)(1/1)react, spell dc vs your spell dc or negate and steal spell cast with your slots for 8hrss';
             }
             if (this.class.match(/Assassin/))
             {
@@ -5459,7 +5459,7 @@ Target the character to receive these spells first.
               C = "@13th(Use Magic Device)use any class item";
               D = "@17th(Thief s Reflexes)1st turn at init, 2nd(turn at init-10 1st round";
             }
-            this.setFeatures('</td></tr><tr><td>@1st(Expertise)<br>Thieves Tools+exp and 1 skill+exp<br>or 2 skills+exp<br>@6th 2 more skills+exp</td></tr><tr><td>@1st(Sneak Attack)1/turn when attacking at advantage or ally adjacent to target extra damage<br>@1st +1d6<br>@3rd +2d6<br>@5th +3d6<br>@7th +4d6<br>@8th +5d6</td></tr><tr><td>@1st(Thieves Cant)gestures</td></tr><tr><td>@2nd(Cunning Action)action as bonus Dash, Disengage, or Hide after attack, under half cover, Stealth vs Perception or target can not attack</td></tr><tr><td>' + A + '</td></tr><tr><td>@4th(Ability Score Improvement)<br>@4th<br>@4th<br>@6th<br>@8th<br>@12th<br>@16th<br>@19th </td></tr><tr><td>@5th(Uncanny Dodge)react for half damage</td></tr><tr><td>@7th(Evasion)dex save for half is no damage</td></tr><tr><td>' + B + '</td></tr><tr><td>@11th(Reliable Talent)abi+pro roll of 9 or less is 10</td></tr><tr><td>' + C + '</td></tr><tr><td>@14th(Blindsense)know location of invisibles 10ft</td></tr><tr><td>@15th(Slippery Mind)wis+pro</td></tr><tr><td>' + D + '</td></tr><tr><td>@18th(Elusive)not attacked at advantage less incapacitated</td></tr><tr><td>@20th(Stroke of Luck)ROKE OF LUCK)recharge short rest, roll failure is success');
+            this.setFeatures('</td></tr><tr><td>@1st(Expertise)<br>Thieves Tools+exp and 1 skill+exp<br>or 2 skills+exp<br>@6th 2 more skills+exp</td></tr><tr><td>@1st(Sneak Attack)1/turn when attacking at advantage or ally adjacent to target extra damage<br>@1st +1d6<br>@3rd +2d6<br>@5th +3d6<br>@7th +4d6<br>@8th +5d6</td></tr><tr><td>@1st(Thieves Cant)gestures</td></tr><tr><td>@2nd(Cunning Action)action as bonus Dash, Disengage, or Hide after attack, under half cover, Stealth vs Perception or target can not attack</td></tr><tr><td>' + A + '</td></tr><tr><td>@4th(Ability Score Improvement)<br>@4th<br>@4th<br>@6th<br>@8th<br>@12th<br>@16th<br>@19th </td></tr><tr><td>@5th(Uncanny Dodge)react for half damage</td></tr><tr><td>@7th(Evasion)dex save for half is no damage</td></tr><tr><td>' + B + '</td></tr><tr><td>@11th(Reliable Talent)abi+pro roll of 9 or less is 10</td></tr><tr><td>' + C + '</td></tr><tr><td>@14th(Blindsense)know location of invisibles 10ft</td></tr><tr><td>@15th(Slippery Mind)wis+pro</td></tr><tr><td>' + D + '</td></tr><tr><td>@18th(Elusive)not attacked at advantage less incapacitated</td></tr><tr><td>@20th(Stroke of Luck)recharge short rest, roll failure is success');
             this.setEquipment('rapier or shortsword.shortbow 20 arrows or shortsword.burglar pack or dungeoneer pack or explorer pack.leather armor.2 daggers.thieves tools');
             this.setHitDice(this.level + 'd8+' + (parseInt(this.level) * parseInt(this.conMod)));
             this.setProficiencies('daggers, darts, light crossbows, quarterstaffs, and slings');
@@ -5521,7 +5521,7 @@ Target the character to receive these spells first.
           {
             if (this.class.match(/Archfey/))
             {
-              A = '@1st Faerie Fire<br>@1st Sleep</td></tr><tr><td>@2nd Calm Emotions<br>@2nd Phantasmal Force</td></tr><tr><td>@3rd Blink<br>@3rd Plant Growth</td></tr><tr><td>@4th Dominate Beast<br>@4th Greater Invisibility</td></tr><tr><td>@5th Dominate Person<br>@5th Seeming</td></tr><tr><td>@1st.FEY PRESENCE 10ft radius wis save or charmed or frightened til end your next turn';
+              A = "@1st Faerie Fire<br>@1st Sleep</td></tr><tr><td>@2nd Calm Emotions<br>@2nd Phantasmal Force</td></tr><tr><td>@3rd Blink<br>@3rd Plant Growth</td></tr><tr><td>@4th Dominate Beast<br>@4th Greater Invisibility</td></tr><tr><td>@5th<b onClick='DominatePerson()'>Dominate Person</b><br>@5th Seeming</td></tr><tr><td>@1st.FEY PRESENCE 10ft radius wis save or charmed or frightened til end your next turn";
               B = '@6th.MISTY ESCAPE (1/1)short rest, take dam, react teleport 60ft invisible til start your next turn or you attack';
               C = '@10th.BEGUILING DEFENSE immune charm, react wis save or charm charmers 10/10 turns or damaged';
               D = '@14th.DARK DELIRIUM (1/1)short rest, 60ft, wis save charmed or frightened con 10/10 turns or damaged';
@@ -5535,7 +5535,7 @@ Target the character to receive these spells first.
             }
             if (this.class.match(/Great/))
             {
-              A = '@1st Dissonant Whispers<br>@1st Tasha s Hideous Laughter</td></tr><tr><td>@2nd Detect Thoughts<br>@2nd Phantasmal Force</td></tr><tr><td>@3rd Clairvoyance<br>@3rd Sending</td></tr><tr><td>@4th Dominate Beast<br>@4th Evard s Black Tentacles</td></tr><tr><td>@5th Dominate Person<br>@5th Telekinesis</td></tr><tr><td>@1st(Awakened Mind)telepathy with language knowing targets 30ft';
+              A =   "@1st Dissonant Whispers<br>@1st Tasha s Hideous Laughter</td></tr><tr><td>@2nd Detect Thoughts<br>@2nd Phantasmal Force</td></tr><tr><td>@3rd Clairvoyance<br>@3rd Sending</td></tr><tr><td>@4th Dominate Beast<br>@4th Evard s Black Tentacles</td></tr><tr><td>@5th<b onClick='DominatePerson()'>Dominate Person</b><br>@5th Telekinesis</td></tr><tr><td>@1st(Awakened Mind)telepathy with language knowing targets 30ft";
               B = '@6th.ENTROPIC WARD (1/1)short rest, react you attacked at disadvantage, next attack your target at advantage';
               C = '@10th.THOUGHT SHIELD immune telepathy at will, resist psychic, attacker takes same psychic dam';
               D = '@14th.CREATE THRALL incapacitated humanoid telepathically charmed til Remove Curse';
@@ -5610,8 +5610,8 @@ Target the character to receive these spells first.
           }
           if (this.class.match(/Transmuter/))
           {
-            A = '@2nd.TRANSMUTATION SAVANT gold and time is halved copying transmutation spells</td></tr><tr><td>@2nd.MINOR ALCHEMY transmute 1ft cube of objects 1 hour';
-            B = '@6th.TRANSMUTER S STONE you or ally that carries it, Darkvision 60ft or speed+10ft or con+pro or resit acid,cold,fire,lightning,thunder</td></tr><tr><td>@10th.SHAPECHANGER learn Polymorph no slot cost self CR1 or lower(1/1)</td></tr><tr><td>@14th.MASTER TRANSMUTER act Transmuter Stone destroyed,(Major Transformation)5ft cube objects or (Panacea)remove all curses,disease,poisons,restore hp of 1 ally or (Restore Life)Raise Dead at no slot cost on 1 ally or (Restore Youth)apparent age is reduced by 3d10 years min 13 of 1 ally'
+            A = '@2nd(Transmutation Savant)gold and time is halved copying transmutation spells</td></tr><tr><td>@2nd.MINOR ALCHEMY transmute 1ft cube of objects 1 hour';
+            B = '@6th(Transmuter s Stone)you or ally that carries it, Darkvision 60ft or speed+10ft or con+pro or resist acid,cold,fire,lightning,thunder</td></tr><tr><td>@10th(Shapechanger)learn Polymorph no slot cost self CR1 or lower(1/1)</td></tr><tr><td>@14th(Master Tansmuter)act Transmuter Stone destroyed<p>(Major Transformation)5ft cube objects or<p>(Panacea)remove all curses,disease,poisons,restore hp of 1 ally or<p>(Restore Life)Raise Dead at no slot cost on 1 ally or<p>(Restore Youth)apparent age is reduced by 3d10 years min 13 of 1 ally'
           }
           if (this.class.match(/Wizard/))
           {

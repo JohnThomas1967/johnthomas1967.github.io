@@ -396,6 +396,11 @@ Target the character to receive these spells first.
                               a = 'Dagger+dex+pro 20/60ft', b = '1d20+0', c = 'piercing+dex', damageDice = '1d4+0', getAction(t1)
                             }
 
+                            function Falchion()
+                            {
+                              a = 'Falchion+str+pro', b = '1d20+0', c = 'slashing+str', damageDice = '2d4+0', getAction(t1)
+                            }
+
                             function Greatclub()
                             {
                               a = '2 handed Greatclub+str+pro', b = '1d20+0', c = 'bludgeoning+str', damageDice = '1d8+0', getAction(t1)
@@ -1626,7 +1631,7 @@ Target the character to receive these spells first.
                               a = '5th(Bigby s Hand)Large hand attacks, pushes 60ft or grapples or shields AC20, your max hp; bns move 60 to 120ft concentration 10/10 turns',
                                 b = '0d0+0',
                                 c = 'restrained, ejected on save',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -1635,7 +1640,7 @@ Target the character to receive these spells first.
                               a = '2nd(Branding Smite)bonus self concentration 1min',
                                 b = '0d0+0',
                                 c = 'weapon+extra radia+1d6/slot and invisible becomes visible for concentration 10/10 turns',
-                                d = '1d6+0',
+                                damageDice = '1d6+0',
                                 getAction(t1)
                             }
 
@@ -1644,7 +1649,7 @@ Target the character to receive these spells first.
                               a = '3rd(Blinding Smite)DC8+' + characters[target].spellAbility + '+pro+focus vsCon',
                                 b = '0d0+0',
                                 c = 'weapon+extra dmg+blinded 10/10 turns or save at the end of your turn',
-                                d = '3d8+0',
+                                damageDice = '3d8+0',
                                 getAction(t1)
                             }
 
@@ -1653,7 +1658,7 @@ Target the character to receive these spells first.
                               a = '5th(Banishing Smite)Next melee hit bonus self concentration 1min',
                                 b = '0d0+0',
                                 c = 'force+less than 50hp banished til spell ends',
-                                d = '5d10+0',
+                                damageDice = '5d10+0',
                                 getAction(t1)
                             }
 
@@ -2047,7 +2052,7 @@ Target the character to receive these spells first.
                               a = '3rd(Crusader s Mantle)',
                                 b = '0d0+0',
                                 c = '10/10 turns weapon+ extra damage for you and allies within a 30ft radi',
-                                d = '3d8+0',
+                                damageDice = '3d8+0',
                                 getAction(t1)
                             }
 
@@ -2056,7 +2061,7 @@ Target the character to receive these spells first.
                               a = '5th(Circle of Power)all in 30ft radius v',
                                 b = '0d0+0',
                                 c = 'save for 0hp when saving for half concentration 10min',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2065,7 +2070,7 @@ Target the character to receive these spells first.
                               a = '2nd(Cordon of Arrows)4+2/slot arrows/bolts attack first targets in 30ft one at a time)DC8+' + characters[target].spellAbility + '+pro+focus vsDex for half 5ft 8hrs',
                                 b = '0d0+0',
                                 c = 'piercing',
-                                d = '1d6+0',
+                                damageDice = '1d6+0',
                                 getAction(t1)
                             }
 
@@ -2467,9 +2472,9 @@ Target the character to receive these spells first.
                             function EldritchBlast()
                             {
                               a = 'Cantrip(Eldritch Blast)+' + characters[target].spellAbility + '+pro+focus 120ft s',
-                                b = '0d0+0',
+                                b = '1d20+0',
                                 c = '1 force beam+1 beam @5, 11, 17th lvl',
-                                d = '1d10+0',
+                                damageDice = '1d10+0',
                                 getAction(t1)
                             }
 
@@ -2478,7 +2483,7 @@ Target the character to receive these spells first.
                               a = '4th(Storm Sphere)20ft radius difficult terrain,)DC8+' + characters[target].spellAbility + '+pro+focus vsStr',
                                 b = '0d0+0',
                                 c = '2d6+1d6/slot level bludg; bns a 60ft ranged attack 4d6 Lightning 150ft concentration 10/10 turns',
-                                d = '4d6+0',
+                                damageDice = '4d6+0',
                                 getAction(t1)
                             }
 
@@ -2487,7 +2492,7 @@ Target the character to receive these spells first.
                               a = '4th(Vitriolic Sphere)20ft radius ;)DC8+' + characters[target].spellAbility + '+pro+focus vsDex halves & no damage ateoynt',
                                 b = '0d0+0',
                                 c = '10d4+2d4/slot level now and 5d4 Acid damage ateoynt',
-                                d = '4d6+0',
+                                damageDice = '4d6+0',
                                 getAction(t1)
                             }
 
@@ -2496,7 +2501,7 @@ Target the character to receive these spells first.
                               a = '4th(Watery Sphere)10ft radius < Huge targets)DC8+' + characters[target].spellAbility + '+pro+focus vsStr each rnd move sphere 30 to 90ft concentration 10/10 turns',
                                 b = '0d0+0',
                                 c = 'restrained, ejected on save',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2505,7 +2510,7 @@ Target the character to receive these spells first.
                               a = '5th(Immolation)1 target)DC8+' + characters[target].spellAbility + '+pro+focus vsDex save for half 90ft concentration 10/10 turns',
                                 b = '0d0+0',
                                 c = 'fire+burns for 3d6 fire per round, save ateoyt',
-                                d = '7d6+0',
+                                damageDice = '7d6+0',
                                 getAction(t1)
                             }
 
@@ -2514,7 +2519,7 @@ Target the character to receive these spells first.
                               a = '5th(Passwall)Create a passage max 5ft wide, 8ft tall, 20ft deep in a wooden, plaster or stone surface duration 1hr',
                                 b = '0d0+0',
                                 c = '',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2523,7 +2528,7 @@ Target the character to receive these spells first.
                               a = '5th(Rary s Telepathic Bond )8 allies with intelligence more than 2 gain a telepathic bond that works for any distance on the same plane 30ft 1hr',
                                 b = '0d0+0',
                                 c = '',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2532,7 +2537,7 @@ Target the character to receive these spells first.
                               a = '5th(Transmute Rock)40 cu ft stone to mud or mud to stone',
                                 b = '0d0+0',
                                 c = 'restrained',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2541,7 +2546,7 @@ Target the character to receive these spells first.
                               a = '5th(Wall of Force)10 10×10ft panels or 10ft radius (hemi)sphere invisible, impenetrable wall, can float in air concentration 10min',
                                 b = '0d0+0',
                                 c = '',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2550,7 +2555,7 @@ Target the character to receive these spells first.
                               a = '2nd(Warding Wind)evocation 1act self V concentration 10min',
                                 b = '0d0+0',
                                 c = '20mph wind 10ft aura, deafens targets, extinguishes flames, hedges out vapor, difficult terrain for targets, ranged attacks against you are at disadv',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2559,7 +2564,7 @@ Target the character to receive these spells first.
                               a = '2nd(Skywrite)transmutation 1act range sight concentration',
                                 b = '0d0+0',
                                 c = '10 cloud words appear in the sky 1hr or strong wind',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2578,7 +2583,7 @@ Target the character to receive these spells first.
                               a = '6th(Globe of Invulnerability)spells less than(6+1/slot level)cast outside area cannot effect inside area 10ft radius concentration 10/10 turns',
                                 b = '0d0+0',
                                 c = '',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2672,7 +2677,7 @@ Target the character to receive these spells first.
                               a = '1st(Puppet)1 action, 120 feet, S, instantaneous, 1 target,)DC8+' + characters[target].spellAbility + '+pro+focus vsCon',
                                 b = '0d0+0',
                                 c = 'target drops everything and runs max speed in direction caster chooses',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2721,7 +2726,7 @@ Target the character to receive these spells first.
                               a = '1st(Wrathful Smite)DC8+' + characters[target].spellAbility + '+pro+focus vsWis or frightened bonus concentration 10/10 turns',
                                 b = '0d0+0',
                                 c = 'weapon+extra psych and frightened',
-                                d = '1d6+0',
+                                damageDice = '1d6+0',
                                 getAction(t1)
                             }
 
@@ -2730,7 +2735,7 @@ Target the character to receive these spells first.
                               a = '2nd(Darkvision)touch 8hrss',
                                 b = '0d0+0',
                                 c = 'you or ally darkvision 60ft',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2739,7 +2744,7 @@ Target the character to receive these spells first.
                               a = '2nd(Find Steed)summon a steed telepathy share spells 10min 30ft s',
                                 b = '0d0+0',
                                 c = '',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2748,7 +2753,7 @@ Target the character to receive these spells first.
                               a = '2nd(Magic Weapon)bonus touch concentration 1hr',
                                 b = '0d0+0',
                                 c = 'weapon becomes +1/+1 more@4th/+1 more@6th attack and damage magical',
-                                d = '0d0+0',
+                                damageDice = '0d0+0',
                                 getAction(t1)
                             }
 
@@ -2757,16 +2762,16 @@ Target the character to receive these spells first.
                               a = '3rd(Aura of Vitality)1 ally within 30ft radius 10/10 turns',
                                 b = '0d0+0',
                                 c = 'heal',
-                                d = '2d6+0',
+                                damageDice = '2d6+0',
                                 getAction(t1)
                             }
 
-                            function Elementalweapon()
+                            function ElementalWeapon()
                             {
                               a = '3rd(Elemental weapon)touch 1hr',
                                 b = '0d0+0',
                                 c = 'your weapon is +1 +2/slot2 +3/slot3 magical and extra +1d4 +2d4/slot2 +3d4/slot3 acid cold fire lightning or thunder dmg',
-                                d = '1d4+0',
+                                damageDice = '1d4+0',
                                 getAction(t1)
                             }
 
@@ -2775,7 +2780,7 @@ Target the character to receive these spells first.
                               a = '3rd(Ensnaring Strike)DC8+' + characters[target].spellAbility + '+pro+focus vsStr',
                                 b = '0d0+0',
                                 c = '10/10 turns slashing+1d6/slot+restrained',
-                                d = '1d6+0',
+                                damageDice = '1d6+0',
                                 getAction(t1)
                             }
 
@@ -2784,7 +2789,7 @@ Target the character to receive these spells first.
                               a = '4th(Aura of Life)',
                                 b = '0d0+0',
                                 c = 'resist heals all 0hp within 30ft radius to 1hp',
-                                d = '0d0+1',
+                                damageDice = '0d0+1',
                                 getAction(t1)
                             }
 
@@ -2793,7 +2798,7 @@ Target the character to receive these spells first.
                               a = '4th(Staggering Smite)DC8+' + characters[target].spellAbility + '+pro+focus vsWis',
                                 b = '0d0+0',
                                 c = 'psych+roll at disadvantage+no reactions til eoynt',
-                                d = '4d6+0',
+                                damageDice = '4d6+0',
                                 getAction(t1)
                             }
 
@@ -2802,7 +2807,7 @@ Target the character to receive these spells first.
                               a = '5th(Destructive Smite)DC8+' + characters[target].spellAbility + '+pro+focus vsCon save for half 30ft radius v',
                                 b = '0d0+0',
                                 c = '5d6 thunder dmg+ 5d6 radiant or necrotic dmg+knocked prone',
-                                d = '10d6+0',
+                                damageDice = '10d6+0',
                                 getAction(t1)
                             }
 
@@ -2811,7 +2816,7 @@ Target the character to receive these spells first.
                               a = '5th(Raise Dead)Restores a Creature s body that has died in the last 10 days to life with 1 hp costs 500gp, 1hr, touch ',
                                 b = '0d0+0',
                                 c = 'heal',
-                                d = '0d0+1',
+                                damageDice = '0d0+1',
                                 getAction(t1)
                             }
 
@@ -2820,7 +2825,7 @@ Target the character to receive these spells first.
                               a = '1st(Hail of Thorns)DC8+' + characters[target].spellAbility + '+pro+focus vsDex for half next ranged weapon attack, all within 5ft of target bonus self concentration 10/10 turns',
                                 b = '0d0+0',
                                 c = 'piercing+1d10/slot',
-                                d = '1d10+0',
+                                damageDice = '1d10+0',
                                 getAction(t1)
                             }
 
@@ -2829,7 +2834,7 @@ Target the character to receive these spells first.
                               a = '1st(Hunter s Mark)Perception/Survival at advantage vs target slot3 8hrs slot5 24hrs bonus 90ft concentration 1hr',
                                 b = '0d0+0',
                                 c = 'weapon+ extra 1d6 transfer mark after target dies',
-                                d = '1d6+0',
+                                damageDice = '1d6+0',
                                 getAction(t1)
                             }
 
@@ -2848,6 +2853,7 @@ Target the character to receive these spells first.
                             s4(s1 + 'Club' + s2 + 'Club' + s3)
                             s4(s1 + 'Dagger' + s2 + 'Dagger' + s3)
                             s4(s1 + 'Dart' + s2 + 'Dart' + s3)
+                            s4(s1 + 'Falchion' + s2 + 'Falchion' + s3)
                             s4(s1 + 'Greatclub' + s2 + 'Greatclub' + s3)
                             s4(s1 + 'Handaxe' + s2 + 'Handaxe' + s3)
                             s4(s1 + 'Javelin' + s2 + 'Javelin' + s3)
@@ -3369,7 +3375,7 @@ Target the character to receive these spells first.
                             s4(s1 + 'CrusadersMantle' + s2 + 'Crusader s Mantle' + s3)
                             s4(s1 + 'Daylight' + s2 + 'Daylight' + s3)
                             s4(s1 + 'DispelMagic' + s2 + 'Dispel Magic' + s3)
-                            s4(s1 + 'Elementalweapon' + s2 + 'Elemental weapon' + s3)
+                            s4(s1 + 'ElementalWeapon' + s2 + 'Elemental weapon' + s3)
                             s4(s1 + 'EnsnaringStrike' + s2 + 'Ensnaring Strike' + s3)
                             s4(s1 + 'MagicCircle' + s2 + 'Magic Circle' + s3)
                             s4(s1 + 'RemoveCurse' + s2 + 'Remove Curse' + s3)
@@ -4683,10 +4689,10 @@ Target the character to receive these spells first.
           menuContents += "</td></tr><tr><td>Flaws:<br><textArea cols=30 rows=3 onChange='characters[" + this.index + "].setFlaws(this.value)'>" + this.flaws + "</textArea>";
           menuContents += "</td></tr><tr><td>Ideals:<br><textArea cols=30 rows=3 onChange='characters[" + this.index + "].setIdeals(this.value)'>" + this.ideals + "</textArea>";
           menuContents += "</td></tr><tr><td><h3>Feats:</h3><textArea cols=30 rows=5 onChange='characters[" + this.index + "].setFeats(this.value)'>" + this.feats + "</textArea>";
-          menuContents += "</td></tr></table></td><td><span id=toggled4" + this.index + " style='display:" + this.toggled4 + "'><table width=200px><tr><td><h2>Class:</h2><select onChange='characters[" + this.index + "].setClass(this.value)'><option>" + this.class + "<option>Barbarian, Ancestral Guardian<option>Barbarian, Berserker<option>Barbarian, Storm Herald<option>Barbarian, Totem Warrior<option>Barbarian, Zealot<option>Bard, Glamour<option>Bard, Lore<option>Bard, Satire</option><option>Bard, Swords<option>Bard, Valor<option>Bard, Whispers<option>Cleric, Arcana</option><option>Cleric, Death</option><option>Cleric, Forge<option>Cleric, Grave<option>Cleric, Knowledge<option>Cleric, Life<option>Cleric, Light<option>Cleric, Nature<option>Cleric, Tempest<option>Cleric, Trickery<option>Cleric, War<option>Druid, Dreams<option>Druid, Land<option>Druid, Moon<option>Fighter, Arcane Archer<option>Fighter, Battle Master<option>Fighter, Cavalier<option>Fighter, Champion<option>Fighter, Eldritch Knight<option>Fighter, Samurai<option>Monk, Drunken Master<option>Monk, Four Elements<option>Monk, Kensei<option>Monk, Open Hand<option>Monk, Shadow<option>Monk, Sun Soul<option>Paladin, Ancients<option>Paladin, Crown</option><option>Paladin, Devotion<option>Paladin, Vengence<option>Ranger, Beast Master<option>Ranger, Hunter<option>Ranger, Monster Slayer<option>Rogue, Arcane Trickster<option>Rogue, Assassin<option>Rogue, Mastermind<option>Rogue, Thief<option>Rogue, Swashbuckler<option>Sorcerer, Draconic<option>Sorcerer, Fire<option>Sorcerer, Storm<option>Sorcerer, Wild<option>Warlock, Archfey<option>Warlock, Fiend<option>Warlock, Great Old Ones<option>Warlock, Undying</option><option>Witch, White Magic</option><option>Witch, Black Magic</option><option>Wizard, Abjurer<option>Wizard, Bladesinger</option><option>Wizard, Conjurer<option>Wizard, Diviner<option>Wizard, Enchanter<option>Wizard, Evoker<option>Wizard, Illusionist<option>Wizard, Necromancer</option><option>Wizard, Theurgist<option>Wizard, Transmuter</select>";
+          menuContents += "</td></tr></table></td><td><span id=toggled4" + this.index + " style='display:" + this.toggled4 + "'><table width=200px><tr><td><h2>Class:</h2><select onChange='characters[" + this.index + "].setClass(this.value)'><option>" + this.class + "<option>Barbarian, Ancestral Guardian<option>Barbarian, Berserker<option>Barbarian, Storm Herald<option>Barbarian, Totem Warrior<option>Barbarian, Zealot<option>Bard, Glamour<option>Bard, Lore<option>Bard, Satire</option><option>Bard, Swords<option>Bard, Valor<option>Bard, Whispers<option>Cleric, Arcana</option><option>Cleric, Death</option><option>Cleric, Forge<option>Cleric, Grave<option>Cleric, Knowledge<option>Cleric, Life<option>Cleric, Light<option>Cleric, Nature<option>Cleric, Tempest<option>Cleric, Trickery<option>Cleric, War<option>Druid, Dreams<option>Druid, Land<option>Druid, Moon<option>Fighter, Arcane Archer<option>Fighter, Battle Master<option>Fighter, Cavalier<option>Fighter, Champion<option>Fighter, Eldritch Knight<option>Fighter, Samurai<option>Monk, Cobalt Soul</option><option>Monk, Drunken Master<option>Monk, Four Elements<option>Monk, Kensei<option>Monk, Open Hand<option>Monk, Shadow<option>Monk, Sun Soul<option>Paladin, Ancients<option>Paladin, Crown</option><option>Paladin, Devotion<option>Paladin, Vengence<option>Ranger, Beast Master<option>Ranger, Hunter<option>Ranger, Monster Slayer<option>Rogue, Arcane Trickster<option>Rogue, Assassin<option>Rogue, Mastermind<option>Rogue, Thief<option>Rogue, Swashbuckler<option>Sorcerer, Draconic<option>Sorcerer, Fire<option>Sorcerer, Storm<option>Sorcerer, Wild<option>Warlock, Archfey<option>Warlock, Fiend<option>Warlock, Great Old Ones</option><option>Warlock, Hexblade</option><option>Warlock, Undying</option><option>Witch, White Magic</option><option>Witch, Black Magic</option><option>Wizard, Abjurer<option>Wizard, Bladesinger</option><option>Wizard, Conjurer<option>Wizard, Diviner<option>Wizard, Enchanter<option>Wizard, Evoker<option>Wizard, Illusionist<option>Wizard, Necromancer</option><option>Wizard, Theurgist<option>Wizard, Transmuter</select>";
           menuContents += "<br><input onChange='characters[" + this.index + "].setClass(this.value)' placeHolder='other class' size=30 type='text'>";
           menuContents += "</td></tr><tr><td>Challenge Rating(CR)or Level(lvl):<input maxLength=3 onChange='characters[" + this.index + "].setLevel(this.value)' size=3 type='text' value=" + this.level + ">";
-          menuContents += "</td></tr><tr><td>Class Features:<br>Target the character to receive the spells here. Make notes in Features Notes: below.<p><color='red'>" + this.features + "</color>";
+          menuContents += "</td></tr><tr><td>Class Features:<br>Target the character to receive the spells here. Make notes in Features Notes: below.<br><color='red'>" + this.features + "</color>";
           menuContents += "</td></tr><tr><td>Feature Notes:<br><textArea cols='30' rows='10' onChange='characters[" + this.index + "].setFeatureNotes(this.value)'placeHolder='Ability Score Increases, etc.'>" + this.featureNotes + "</textarea>";
           menuContents += "</td></tr><tr><td>Class Proficiencies:<br><input onChange='characters[" + this.index + "].setProficiencies(this.value)' size=30 value='" + this.proficiencies + "'>";
           menuContents += "</td></tr><tr><td>Class Saving Throws:<br><input onChange='characters[" + this.index + "].setSaving(this.value)' size=30 value='" + this.saving + "'>";
@@ -5092,7 +5098,7 @@ Target the character to receive these spells first.
             {
               A = "@1st(Forge Domain Spells)<br><b onClick='Identify()'>Identify</b><br><b onClick='SearingSmite()'>Searing Smite</b></td></tr><tr><td>@1st(Bonus Proficiencies)<br>heavy armor<br>smith s tools</td></tr><tr><td>@1st(Blessings of the Forge)<br>turn 1 weapon or 1 armor into a +1 magical item permanently<br>recharge long rest</td></tr><tr><td>@2nd(Artisan s Blessing)<br>1CD<br>1hr ritual<br>construct 1 weapon or 1 suit of armor or 10 ammo or tools, must be metal and under 100gp";
               B = "@3rd(Forge Domain Spells)<br><b onClick='HeatMetal()'>Heat Metal</b><br><b onClick='MagicWeapon()'>Magic Weapon</b>";
-              C = "@5th(Forge Domain Spells)<br><b onClick='Elementalweapon()'>Elemental weapon</b><br><b onClick='ProtectionFromEnergy()'>Protection from Energy</b></td></tr><tr><td>@6th(Soul of the Forge)resistance fire dmg<br>heavy armor AC+1</td></tr><tr><td>7th(Forge Domain Spells)<br><b onClick='Fabricate()'>Fabricate</b><br><b onClick='WallOfFire()'>Wall of Fire</b></td></tr><tr><td>@8th(Divine Strike)<br>extra 1d8 fire dmg<br>@14th 2d8</td></tr><tr><td>@9th(Forge Domain Spells)<br><b onClick='AnimateObject()'>Animate Object</b><br><b onClick='Creation()'>Creation</b>";
+              C = "@5th(Forge Domain Spells)<br><b onClick='ElementalWeapon()'>Elemental weapon</b><br><b onClick='ProtectionFromEnergy()'>Protection from Energy</b></td></tr><tr><td>@6th(Soul of the Forge)resistance fire dmg<br>heavy armor AC+1</td></tr><tr><td>7th(Forge Domain Spells)<br><b onClick='Fabricate()'>Fabricate</b><br><b onClick='WallOfFire()'>Wall of Fire</b></td></tr><tr><td>@8th(Divine Strike)<br>extra 1d8 fire dmg<br>@14th 2d8</td></tr><tr><td>@9th(Forge Domain Spells)<br><b onClick='AnimateObject()'>Animate Object</b><br><b onClick='Creation()'>Creation</b>";
               D = "@17th(Saint of Forge and Fire)<br>immune fire dmg<br>heavy armor resist bludgeoning, piercing, slashing from non-magical weapons";
             }
             if (this.class.match(/Grave/))
@@ -5279,6 +5285,13 @@ Target the character to receive these spells first.
               B = '@6th CLENCH OF THE NORTH WIND 6Ki Cone of Cold<br>@6th GONG OF THE SUMMIT 3Ki Shatter<br>@11th ETERNAL MOUNTAIN DEFENSE 5Ki, self, Stoneskin';
               C = '@11th FLAMES OF THE PHOENIX 4Ki Fireball<br>@11th MIST STANCE 4Ki, self, Gaseous Form<br>@11th RIDE THE WIND 4Ki, self, Fly';
               D = '@17th BREATH OF WINTER 6Ki Cone of Cold<br>@17th RIVER OF HUNGRY FLAME 5Ki Wall of Fire<br>@17th WAVE OF ROLLING EARTH 6Ki Wall of Stone';
+            }
+            if (this.class.match(/Cobalt/))
+            {
+              A = '(Cobalt Soul)</td></tr><tr><td>@3rd(Mystical Erudition)target is hit, spend 1 Ki Point, con save or you learn creature type or ac or senses or highest or lowest save modifier or vulnerabilities or resistance or immunities<br>@6th learn 2 aspects<br>@11th 3<br>@17th 4';
+              B = '@6th(Extort Truth)target is hit twice, spend 2 Ki Points, the target knows it can not lie for 1min</tr></td><tr><td>@6th(Mind of Mercury)take a number int mod of reactions per trigger at cost of 1 Ki Point after the first reaction, spend 1 Ki Point,Investigation at advantage';
+              C = '@11th(Preternatural Counter)attacker misses you, you use your reaction to attack';
+              D = '@17th(Debilitating Barrage)hit target with 3 or more attacks, spend 3 ki points, target attacks at disadvantage uteoynt and con save or vulnerable to a dmg type of your choice 1min, unless resistant or immune which is revealed when you choose';
             }
             if (this.class.match(/Drunken/))
             {
@@ -5540,6 +5553,13 @@ Target the character to receive these spells first.
               C = '@10th.THOUGHT SHIELD immune telepathy at will, resist psychic, attacker takes same psychic dam';
               D = '@14th.CREATE THRALL incapacitated humanoid telepathically charmed til Remove Curse';
             }
+            if (this.class.match(/Hexblade/))
+            {
+              A = "@1st <b onClick='Shield()'>Shield</b><br>@1st <b onClick='WrathfulSmite()'>Wrathful Smite</b><br>@2nd <b onClick='Blur()'>Blur</b><br>@2nd <b onClick='BrandingSmite()'>Branding Smite</b><br>@3rd <b onClick='Blink()'>Blink</b><br>@3rd <b onClick='ElementalWeapon()'>Elemental Weapon</b><br>@4th <b onClick='PhantasmalKiller()'>Phantasmal Killer</b><br>@4th <b onClick='StaggeringSmite()'>Staggering Smite</b><br>@5th <b onClick='BanishingSmite()'>Banishing Smite</b><br>@5th <b onClick='ConeOfCold()'>Cone of Cold</b></td></tr><tr><td>@1st(Hexblade s Curse)1bonus,1target,30ft,1min,dmg+pro,crit on 19-20,target dies you heal your lvl+cha,1/1short rest</td></tr><tr><td>@1st(Hex Warrior)pro at medium armor, shields, martial weapons, 1h weapon and pact weapons attack+cha dmg+cha";
+              B = "@6th(Accursed Specter)your target dies becomes Specter with temp hp 1/2 your lvl, attacks+your cha uteoy next long rest";
+              C = '@10th(Armor of Hexes)attacker hits you, roll d6 4+ attacker misses';
+              D = '@14th(Master of Hexes)you transfer the curse to another target, you do not gain hp from new target deaths';
+            }
             if (this.class.match(/Undying/))
             {
               A = '@1st False Life<br>@1st Ray of Sickness</td></tr><tr><td>@2nd BlindnessDeafness<br>@2nd Silence</td></tr><tr><td>@3rd Feign Death<br>@3rd Speak with Dead';
@@ -5548,7 +5568,7 @@ Target the character to receive these spells first.
               D = '@10th.UNDYING NATURE do not need air, food, water or sleep unless long or short rest/age 1yr for every 10yrs/immune magically aged';
               E = '@14th.INDESTRUCTABLE LIFE (1/1)short rest/bonus heal 1d8+lvl/reattach your severed body parts';
             }
-            this.setFeatures('@<table><tr><td>1st.PACT MAGIC spellMod is chaMod</td></tr><tr><td>EXPANDED SPELLS</td></tr><tr><td>' + A + '</td></tr><tr><td>@2nd.ELDRITCH INVOCATIONS KNOWN<br>@2nd 2)<br>@5th(3)<br>@7th(4)<br>@9th(5)<br>@12th(6)<br>@(15th 7)<br>@(18th 8)</td></tr><tr><td> AGONIZING BLAST must have Eldritch Blast, dam+chaMod. ARMOR OF SHADOWS Mage Armor no slot cost<br>@9th ASCENDANT STEP Levitate at will, no slot cost. BEAST SPEECH Speak with Animals at will, no slot cost. BEGUILING INFLUENCE Deception Persuasion+pro<br>@7th BEWITCHING WHISPERS Compulsion, slot cost, (1/1)long rest. BOOK OF ANCIENT SECRETS must have Pact of the Tome, 2 1st lvl spells of any class as rituals, add adventure rituals 2hrs 50gp<br>@15th CHAINS OF CARCERI (1/1)long rest, Hold Monster at will, no slot cost or components. DEVIL S SIGHT 120ft see in magical nonmagical darkness<br>@7th DREADFUL WORD (1/1)long rest, Confusion, slot cost. ELDRITCH SIGHT Detect magic at will, no slot cost. EDRITCH SPEAR must have Eldritch Blast, range 300ft. EYES OF THE RUNE KEEPER read all writing. FIENDISH VIGOR False Life at will, no slot cost. GAZE OF TWO MINDS see through ally till end your next turn<br>@12th LIFEDRINKER must have Pact of the Blade, dam+chaMod necrotic. MASK OF MANY FACES Disguise Self at will, no slot cost<br>@15th MASTER OF MYRIAD FORMS Alter Self at will, no slot cost<br>@9th MINIONS OF CHAOS (1/1)long rest, Conjure Elemental, slot cost<br>@5th MIRE THE MIND (1/1)long rest, Slow, slot cost. MISTY VISIONS Silent Image at will, no slot cost, no material component<br>@5th ONE WITH SHADOWS in dim or darkness, 1 action, invisible til move, act, react<br>@9th OTHERWORLDLY LEAP jump at will, no slot cost, no material component. REPELLING BLAST must have Eldritch Blast, on hit push target up to 10ft<br>@7th SCULPTOR OF FLESH (1/1)long rest, Polymorph, 1 slot<br>@5th SIGN OF ILL OMEN (1/1)long rest, Bestow Curse. THIEF OF FIVE FATES (1/1)long rest, Bane<br>@5th THIRSTING BLADE must have Pact of the Blade, 1 more attack<br>@15th VISIONS OF DISTANT REALMS Arcane Eye at will, no slot cost. VOICE OF THE CHAIN MASTER must have Pact of the Chain, telepathy with familiar, sense and speak through familiar<br>@9th WHISPERS OF THE GRAVE Speak with Dead at will, no slot cost<br>@15th WITCH SIGHT see true form of shapechanger of illusion or transmutation 30ft</td></tr><tr><td>@3rdPACT BOON</td></tr><tr><td> PACT OF THE CHAIN Find Familiar as ritual, imp, pseudodragon, quasit, sprite, or normal familiar, familiar attacks as its reaction</td></tr><tr><td> PACT OF THE BLADE weapon becomes magical, summon dismiss weapon as bonus</td></tr><tr><td> PACT OF THE TOMB 3 any class extra cantrips, 1hr to replace book1</td></tr><tr><td>@4th.ABILITY SCORE IMPROVEMENT<br>@4th<br>@8th<br>@12th<br>@16th<br>@19th</td></tr><tr><td>' + B + '</td></tr><tr><td>' + C + '</td></tr><tr><td>@11th.MYSTIC ARCANUM<br>@(11th 1 new 6th lvl Warlock spell without slot cost, after slot cost)(1/1)<br>@(13th 7th lvl)(1/1)<br>@(15th 8th lvl)(1/1)<br>@(17th 9th lvl)(1/1)</td></tr><tr><td>' + D + '</td></tr><tr><td>@20th.ELDRITCH MASTER (1/1)</td></tr><tr><td>SPELL SLOTS RECOVERED AFTER SHORT REST<br>@1st(1/1)<br>@2nd 2/2)<br>@(11th 3/3)<br>@(17th 4/4)</td></tr><tr><td>SPELL SLOT LEVEL all spells are at this slot level<br>@1st(1st)<br>@3rd(2nd)<br>@5th(3rd)<br>@7th(4th)<br>@9th(5th)');
+            this.setFeatures('</td></tr><tr><td>@1st(Pact Magic)spellMod is chaMod</td></tr><tr><td>@1st(Expanded Spells)<br>' + A + '</td></tr><tr><td>@2nd(Eldritch Invocations Known)<br>@2nd 2<br>@5th 3<br>@7th 4<br>@9th 5<br>@12th 6<br>@15th 7<br>@18th 8</td></tr><tr><td>(Agonizing Blast)must have Eldritch Blast, dam+chaMod<p>(Armor of Shadows)Mage Armor no slot cost<p>@9th(Ascendant Step)Levitate at will, no slot cost<p>(Beast Speech)Speak with Animals at will, no slot cost<p>(Beguiling Influence)Deception Persuasion+pro<p>@7th(Bewitching Whispers)Compulsion, slot cost, (1/1)long rest<p>(Book of Ancient Secrets)must have Pact of the Tome, 2 1st lvl spells of any class as rituals, add adventure rituals 2hrs 50gp<p>@15th(Chains of Carceri)1/1 long rest, Hold Monster at will, no slot cost or components<p>(Devil s Sight)120ft see in magical nonmagical darkness<p>@7th(Dreadful Word)1/1 long rest, Confusion, slot cost<p>(Edritch Sight)Detect magic at will, no slot cost<p>(Eldritch Spear)must have Eldritch Blast, range 300ft<p>(Eyes of the Rune Keeper)read all writing<p>(Fiendish Vigor)False Life at will, no slot cost<p>(Gaze of Two Minds)see through ally till end your next turn<p>@12th(Lifedrinker)must have Pact of the Blade, dam+chaMod necrotic<p>(Mask of Many Faces)Disguise Self at will, no slot cost<p>@15th(Master of Myriad Forms)Alter Self at will, no slot cost<p>@9th(Minions of Chaos)1/1 long rest, Conjure Elemental, slot cost<p>@5th(Mire the Mind)1/1 long rest, Slow, slot cost<p>(Misty Visions)Silent Image at will, no slot cost, no material component<p>@5th(One with Shadows)in dim or darkness, 1 action, invisible til move, act, react<p>@9th(Otherworldly Leap)jump at will, no slot cost, no material component<p>(Repelling Blast)must have Eldritch Blast, on hit push target up to 10ft<p>@7th(Sculptor of Flesh)1/1 long rest, Polymorph, 1 slot<p>@5th(Sign of Ill Omen)1/1 long rest, Bestow Curse<p>(Thief of Five Fates)1/1 long rest, Bane<p>@5th(Thirsting Blade)must have Pact of the Blade, 1 more attack<p>@15th(Visions of Distant Realms)Arcane Eye at will, no slot cost<p>(Voice of the Chain Master)must have Pact of the Chain, telepathy with familiar, sense and speak through familiar<p>@9th(Whispers of the Grave)Speak with Dead at will, no slot cost<p>@15th(Witch Sight)see true form of shapechanger of illusion or transmutation 30ft</td></tr><tr><td>@3rd(Pact Boon)</td></tr><tr><td>(Pact of the Chain)Find Familiar as ritual, imp, pseudodragon, quasit, sprite, or normal familiar, familiar attacks as its reaction</td></tr><tr><td>(Pact of the Blade)weapon becomes magical, summon dismiss weapon as bonus</td></tr><tr><td>(Pact of the Tomb)3 any class extra cantrips, 1hr to replace book1</td></tr><tr><td>@4th(Ability Score Improvement)<br>@4th<br>@8th<br>@12th<br>@16th<br>@19th</td></tr><tr><td>' + B + '</td></tr><tr><td>' + C + '</td></tr><tr><td>@11th(Mystic Arcanum)<br>@11th 1 new 6th lvl Warlock spell without slot cost, after slot cost)(1/1)<br>@13th 7th lvl(1/1)<br>@15th 8th lvl(1/1)<br>@17th 9th lvl(1/1)</td></tr><tr><td>' + D + '</td></tr><tr><td>@20th(Eldritch Master)1/1 long rest, takes 1min restore all slots</td></tr><tr><td>(Spell Slots Recovered After Short Rest)@1st 1<br>@2nd 2<br>@11th 3<br>@17th 4</td></tr><tr><td>(Spell Slot Level)all spells are at this slot level<br>@1st(1st slot lvl)<br>@3rd(2nd slot lvl)<br>@5th(3rd slot lvl)<br>@7th(4th slot lvl)<br>@9th(5th slot lvl)');
             this.setEquipment('light crossbow 20 bolts or simple weapon.component pouch or arcane focus.scholar pack or dungeoneer pack.leather armor.simple weapon.2 daggers');
             this.setHitDice(this.level + 'd8+' + (parseInt(this.level) * parseInt(this.conMod)));
             this.setProficiencies('light armor, simple weapons');

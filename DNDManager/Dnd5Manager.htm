@@ -195,6 +195,7 @@
                   <tr>
                     <td>
                       <script>
+
                         function rollDForm(dForm)
                         {
                           dForm = dForm.toLowerCase();
@@ -4589,11 +4590,19 @@ Target the character to receive these spells first.
           this.menu.putAt(menuX, y);
         }
 
+ $("input[name='id_radioname']").on(
+   'change',
+   function(e){
+     var value = $("input[name='id_radioname']:checked").val();
+     localStorage.setItem('option', value);
+     location.reload();
+   })
+
         function _ref()
         {
           boxContents = "<img src='" + this.figure + "'><br>";
           boxContents += "<table><tr><td><table><tr><td>" + this.name
-          boxContents += "</td></tr><tr><td>Target?<input name=targeted onClick='target=" + this.index + "' type=radio>"
+          boxContents += "</td></tr><tr><td>Target?<input id='targeted"+this.index+"' name='targeted' onClick='target=" + this.index + "' type='radio'>"
           boxContents += "HP:" + this.curHp + "</td></tr>";
           boxContents += "</td></tr><tr><td><input type='button' onClick='toggleMenu(" + this.index + ")'value='Show stats?'></td></tr>";
           boxContents += "</td></tr><tr><td>Initiative " + this.init + "</td></tr></table>";
@@ -7919,15 +7928,18 @@ Target the character to receive these spells first.
           theCondition = characters[x].rollNames2[i];
           if (characters[x].rollNames2[i].match(/heal/))
           {
-            log2 = "</td></tr><tr><td colspan='2'>" + characters[x].name + "<br>" + characters[x].rollNames2[i] + "<br><input onClick='characters[target].setDamageConditions(characters[target].damageConditions+theCondition)' type='button' value='Assign this damage condition?'></td></tr><tr><td>heal 1<br>" + characters[x].rolls2[i] + "<br>(" + naturalRoll1 + roll1 + ")<br>" + abiMod + " " + abi + "<br>" + skillMod + " pro<br>" + characters[x].sit + " sit<br>=" + rollTotal1 + "<br><input onClick='characters[target].setCurHp(characters[target].curHp+rollTotal1)' type='button' value=Heal?></td><td>Healing 2<br>" + characters[x].rolls2[i] + "<br>(" + naturalRoll2 + roll2 + ")<br>" + abiMod + " " + abi + "<br>" + skillMod + " pro<br>" + characters[x].sit + " sit<br>=" + rollTotal2 + "<br><input onClick='characters[target].setCurHp(characters[target].curHp+rollTotal2)' type='button' value=Heal?></td></tr></table>";
+            log2 = "</td></tr><tr><td colspan='2'>" + characters[x].name + "<br>" + characters[x].rollNames2[i] + "<br><input onClick='characters[target].setDamageConditions(characters[target].damageConditions+theCondition);checkTheTarget()' type='button' value='Assign this damage condition?'></td></tr><tr><td>heal 1<br>" + characters[x].rolls2[i] + "<br>(" + naturalRoll1 + roll1 + ")<br>" + abiMod + " " + abi + "<br>" + skillMod + " pro<br>" + characters[x].sit + " sit<br>=" + rollTotal1 + "<br><input onClick='characters[target].setCurHp(characters[target].curHp+rollTotal1);checkTheTarget()' type='button' value=Heal?></td><td>Healing 2<br>" + characters[x].rolls2[i] + "<br>(" + naturalRoll2 + roll2 + ")<br>" + abiMod + " " + abi + "<br>" + skillMod + " pro<br>" + characters[x].sit + " sit<br>=" + rollTotal2 + "<br><input onClick='characters[target].setCurHp(characters[target].curHp+rollTotal2);checkTheTarget()' type='button' value=Heal?></td></tr></table>";
             characters[x].setCombatLog(log1 + log + log2);
           }
           else
           {
-            log2 = "</td></tr><tr><td colspan='2'>" + characters[x].rollNames2[i] + "<br><input onClick='characters[target].setDamageConditions(characters[target].damageConditions+theCondition)' type='button' value='Assign this damage condition?'></td></tr><tr><td><h3>damage 1</h3>" + characters[x].rolls2[i] + "<br>(" + naturalRoll1 + roll1 + ")<br>" + abiMod + " " + abi + "<br>" + skillMod + " pro<br>" + characters[x].sit + " sit<br>=" + rollTotal1 + "<br><input onClick='characters[target].setCurHp(characters[target].curHp-rollTotal1)' type='button' value=damage?><br><input onClick='characters[target].setCurHp(Math.floor(characters[target].curHp-(parseInt(rollTotal1/2))))' type='button' value='Half damage?'></td><td><h3>damage 2</h3>" + characters[x].rolls2[i] + "<br>(" + naturalRoll2 + roll2 + ")<br>" + abiMod + " " + abi + "<br>" + skillMod + " pro<br>" + characters[x].sit + " sit<br>=" + rollTotal2 + "<br><input onClick='characters[target].setCurHp(characters[target].curHp-rollTotal2)' type='button' value=damage?><br><input onClick='characters[target].setCurHp(Math.floor(characters[target].curHp-(parseInt(rollTotal2/2))))' type='button' value='Half damage?'></td></tr></table>";
+            log2 = "</td></tr><tr><td colspan='2'>" + characters[x].rollNames2[i] + "<br><input onClick='characters[target].setDamageConditions(characters[target].damageConditions+theCondition);checkTheTarget()' type='button' value='Assign this damage condition?'></td></tr><tr><td><h3>damage 1</h3>" + characters[x].rolls2[i] + "<br>(" + naturalRoll1 + roll1 + ")<br>" + abiMod + " " + abi + "<br>" + skillMod + " pro<br>" + characters[x].sit + " sit<br>=" + rollTotal1 + "<br><input onClick='characters[target].setCurHp(characters[target].curHp-rollTotal1);checkTheTarget()' type='button' value=damage?><br><input onClick='characters[target].setCurHp(Math.floor(characters[target].curHp-(parseInt(rollTotal1/2))));checkTheTarget()' type='button' value='Half damage?'></td><td><h3>damage 2</h3>" + characters[x].rolls2[i] + "<br>(" + naturalRoll2 + roll2 + ")<br>" + abiMod + " " + abi + "<br>" + skillMod + " pro<br>" + characters[x].sit + " sit<br>=" + rollTotal2 + "<br><input onClick='characters[target].setCurHp(characters[target].curHp-rollTotal2);checkTheTarget()' type='button' value=damage?><br><input onClick='characters[target].setCurHp(Math.floor(characters[target].curHp-(parseInt(rollTotal2/2))));checkTheTarget()' type='button' value='Half damage?'></td></tr></table>";
             characters[x].setCombatLog(log1 + log + log2);
           }
+document.getElementById('targeted' + [target]).checked='checked';
         }
+
+function checkTheTarget(){document.getElementById('targeted' + [target]).checked='checked';}
 
         function removeChar(x)
         {

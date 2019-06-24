@@ -25,7 +25,7 @@ a:hover
  }
 
 body
- {transform : rotateY(360deg) ;}
+ {}
 
 h1, h2, h3
  {border-radius : 0px 10px 10px 0px ;
@@ -130,6 +130,29 @@ tr:nth-child(even)
   margin : 5px 5px 5px 5px ; 
   padding: 5px 5px 5px 5px ;
  }
+      
+  #spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  #spinner:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+      
      </style>
   </head>
 <table class='d2'>
@@ -162,9 +185,13 @@ tr:nth-child(even)
       <a href='http://archive.fo/O8lvD'>Herod's Family Tree, Bible Mysteries, No Blood Pagan Ritual</a>      
  </div>
    </span>
+   <div id="stage" style="background: rgba(0,0,0,0.5);">
+<p id="spinner" style="background: rgba(0,0,0,0.5); text-align: center; color: #fff;">
       <div class = 'd3'>
        .[....]<object align="right">TT</object>
-      <div>
+      <div> 
+</div>
+
   </div>
   </td>
  </tr>

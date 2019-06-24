@@ -22,6 +22,7 @@ a:hover
  {
   color : 996666 ;
   text-decoration : none ;
+  width : 800px;
  }
 
 body
@@ -83,6 +84,15 @@ div.d3
   margin : 5px 5px 5px 5px ; 
   padding: 5px 5px 5px 5px ;
   position : relative ;
+ }
+
+div.d4
+ {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+  transition: width 2s;
  }
 
 img
@@ -170,6 +180,6 @@ tr:nth-child(even)
   </td>
  </tr>
   </table>
-       <div animation: example 5s linear 2s infinite alternate;><object align="right">TT</object></div> 
+       <div class='d4'><object align="right">TT</object></div> 
  </body>
 </html>

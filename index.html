@@ -26,7 +26,6 @@
   color : #8b0000 ;
   font-family : Matrix ;
   font-size : 17px ;
-  grid-template-rows: 10%, 60%, 10%, 10%, 10%;
   height : inherit ;
   line-height : 30px ;
   margin : 5px 5px 5px 5px ; 
@@ -37,28 +36,19 @@
      }
 
 .a {
-  grid-row: 2 / 1;
-  grid-column: 2 / 1;
+  grid-area: header;
 }
 
-.b {
-  grid-row: 2 / 1;
-  grid-column: 2 / 1;
+.b {grid-area: main;
 }
 
-.c {
-  grid-row: 3 / 1;
-  grid-column: 1 / 1;
+.c {grid-area: sidebar;
 }
 
-.d {
-  grid-row: 3 / 1;
-  grid-column: 2 / 1;
+.d {grid-area: footer;
 }
 
 .e {
-  grid-row: 3 / 1;
-  grid-column: 3 / 1;
 }
       
 @font-face

@@ -13,7 +13,7 @@
   display: grid;
   background: no-repeat url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/grid.png);
   grid-gap: 10px;
-  grid-template-columns:  repeat(3, 300px);
+  grid-template-columns:  repeat(5, 300px);
   grid-template-rows: repeat( 5, 300px);
   background-color: #fff;
   color: #444;
@@ -22,9 +22,8 @@
 .box {
   border: 1px solid #444;
   padding: 20px;
-  font-size: 150%;
+  font-size: 200%;
 }
-
 
 .a {
   grid-column: 1 / 1;
@@ -40,19 +39,19 @@
 
 .c {
   grid-column: 1 / 1;
-  grid-row: 3 /  3;
+  grid-row: 5 / 3;
   align-self: start;
 }
 
 .d {
   grid-column: 1 / 1;
-  grid-row: 4 / 3;
+  grid-row: 6 / 3;
   align-self: start;
 }
 
 .e {
   grid-column: 1 / 1;
-  grid-row: 5 / 3;
+  grid-row: 7 / 3;
   align-self: start;
 }
       
@@ -187,7 +186,6 @@ tr:nth-child(even)
   </div>
   <div class="box b">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/jxuu1J0wsWU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <code>align-self: end</code>
   </div>
   <div class="box c">
    <a href='https://www.amc.com'>AMC</a>

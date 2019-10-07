@@ -15,26 +15,19 @@
 }
 
 .box {
-  border-radius : 0px 50px ;
   box-shadow : 0px 0px 20px black ;
+  border-width : 10px ;
+  color : white ;
+  font-family : Matrix ;
+  font-size : 17px ;
+  height : inherit ;
+  line-height : 30px ;
   margin : 5px 5px 5px 5px ; 
   padding: 5px 5px 5px 5px ;
-  position : relative ;
   text-align : center ;
- {text-shadow : 0 1px 0 #ccc,
-                0 2px 0 #c9c9c9,
-                0 3px 0 #bbb,
-                0 4px 0 #b9b9b9,
-                0 5px 0 #aaa,
-                0 6px 1px rgba(0,0,0,.1),
-                0 0 5px rgba(0,0,0,.1),
-                0 1px 3px rgba(0,0,0,.3),
-                0 3px 5px rgba(0,0,0,.2),
-                0 5px 10px rgba(0,0,0,.25),
-                0 10px 10px rgba(0,0,0,.2),
-                0 20px 20px rgba(0,0,0,.15) ;
- }
-}
+  text-shadow : 2px 8px 6px rgba(0,0,0,0.2),
+                0px -5px 35px rgba(255,255,255,0.3) 
+     }
 
 .a {
   grid-column: 1 / 1;
@@ -50,98 +43,30 @@
 
 .c {
   grid-column: 1 / 1;
-  grid-row: 5 / 3;
+  grid-row: 7 / 3;
   align-self: start;
 }
 
 .d {
   grid-column: 1 / 1;
-  grid-row: 6 / 3;
+  grid-row: 8 / 3;
   align-self: start;
 }
 
 .e {
   grid-column: 1 / 1;
-  grid-row: 7 / 3;
+  grid-row: 9 / 3;
   align-self: start;
 }
       
 @font-face
  {font-family: "Matrix"; src: url("Matrix.ttf") format("truetype")}      
 
-a 
- { 
-  color : 990033 ;
-  text-decoration : none ;
- }
-
-a:hover
- {
-  color : 996666 ;
-  text-decoration : none ;
-  width : 800px;
- }
-
 body
  {text-align : center ;
   font-family : 'Matrix' ;
  }
 
-h1, h2, h3
- {border-radius : 0px 50px ;
-  box-shadow : 0px 0px 0px black ;
-  margin : 5px 5px 5px 5px ; 
-  padding: 10px 5px 5px 5px ;
-  position : relative ;
- }
-
-h1, h2, h3
- {text-shadow : 0 1px 0 #ccc,
-                0 2px 0 #c9c9c9,
-                0 3px 0 #bbb,
-                0 4px 0 #b9b9b9,
-                0 5px 0 #aaa,
-                0 6px 1px rgba(0,0,0,.1),
-                0 0 5px rgba(0,0,0,.1),
-                0 1px 3px rgba(0,0,0,.3),
-                0 3px 5px rgba(0,0,0,.2),
-                0 5px 10px rgba(0,0,0,.25),
-                0 10px 10px rgba(0,0,0,.2),
-                0 20px 20px rgba(0,0,0,.15) ;
- }
- 
-
-h1 {padding-left : 5px}
-h2 {padding-left : 10px}
-h3 {padding-left : 15px}
-
-div.d1
- {
-  border-radius : 0px 50px ;
-  box-shadow : 0px 0px 20px black ;
-  margin : 5px 5px 5px 5px ; 
-  padding: 5px 5px 5px 5px ;
-  position : relative ;
- }
-
-div.d2
- {
-  border-radius : 0px 50px ;
-  box-shadow : 0px 0px 20px black ;
-  margin : 5px 5px 5px 5px ; 
-  padding: 5px 5px 5px 5px ;
-  position : relative ;
-  text-align : center ;
- }
-
-div.d3
- {
-  background-image : url("Background.gif") ; 
-  border-radius : 0px 20px 20px 0px ;
-  box-shadow : 0px 0px 20px black ;
-  height : 800px ;
-  width : 100px ;
- }
 img
  {
   border : 0 ;
@@ -153,41 +78,7 @@ img
  }
 
 p {text-indent : 5px}
-p.p2 {text-indent : 10px}
-p.p3 {text-indent : 15px}
-
-table
- {width : 700px ;}
-
-tr
- {background-image : url("") ;}
-
-td
- {
-  box-shadow : 0px 0px 20px black ;
-  border-width : 10px ;
-  color : white ;
-  font-family : Matrix ;
-  font-size : 17px ;
-  height : inherit ;
-  line-height : 30px ;
-  margin : 5px 5px 5px 5px ; 
-  padding: 5px 5px 5px 5px ;
-  text-align : center ;
-  text-shadow : 2px 8px 6px rgba(0,0,0,0.2),
-                0px -5px 35px rgba(255,255,255,0.3) ;
- }
-
-tr:nth-child(even)
- {background : rgba(0, 0, 0, .2) ;}
-
-.columns 
- {
-  -moz-column-count : 2 ;
-  margin : 5px 5px 5px 5px ; 
-  padding: 5px 5px 5px 5px ;
- }
-      
+     
      </style>
   </head>
 

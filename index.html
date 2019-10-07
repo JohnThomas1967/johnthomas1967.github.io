@@ -9,6 +9,22 @@
     >
      <style type="text/css">
       
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: minmax(200px, 1fr) 200px 200px;
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}      
+      
 @font-face
  {font-family: "Matrix"; src: url("Matrix.ttf") format("truetype")}      
 
@@ -156,6 +172,12 @@ tr:nth-child(even)
  </tr>
 </table>
   </div>  
+
+<div class="wrapper">
+  <div class="box a">A</div>
+  <div class="box b">B</div>
+  <div class="box c">C</div>
+</div>
 
  </body>
 </html>

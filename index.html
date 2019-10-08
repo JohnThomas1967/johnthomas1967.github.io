@@ -43,16 +43,19 @@
     grid-row:2;
    }
 
-.c {grid-column:1;
+.c {display: grid;
+    grid-column:1;
     grid-row:3;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
    }
 
-.d {grid-column:2;
-    grid-row:4;
+.d {grid-column:1;
+    grid-row:1;
    }
 
-.e {grid-column:3;
-    grid-row:4;
+.e {grid-column:2;
+    grid-row:1;
    }
       
 @font-face

@@ -77,7 +77,17 @@ shape-outside: polygon(0% 91%, 1% 60%, 33% 48%, 28% 30%, 36% 7%, 58% 6%, 70% 29%
 clip-path: polygon(0% 91%, 1% 60%, 33% 48%, 28% 30%, 36% 7%, 58% 6%, 70% 29%, 64% 48%, 95% 66%, 96% 91%); 
 float: left;
 }
-     
+      
+.hazTape{      
+ background: repeating-linear-gradient
+   (45deg,
+    #eed202,
+    #eed202 10px,
+    #000000 10px,
+    #000000 20px
+   );        
+      }
+      
 @font-face
  {font-family: "Matrix"; src: url("Matrix.ttf") format("truetype")}      
 
@@ -96,13 +106,7 @@ img
  }
 
 p:first-of-type:first-letter
-   {background: repeating-linear-gradient
-   (45deg,
-    #eed202,
-    #eed202 10px,
-    #000000 10px,
-    #000000 20px
-   );  
+   {
     box-shadow: 0 0 10px -2px black;
     font-size: 50px;
     font-family: 'Matrix';
@@ -113,7 +117,7 @@ p:first-of-type:first-letter
      </style>
   </head>
 <body>
-TT
+ <div class="hazTape">TT</div>
 <div class="wrapper">
 
   <div class="box a">
@@ -125,7 +129,7 @@ TT
      Your browser does not support the audio element.
    </audio>
   </div>
- <div class="box c">
+ <div class="box c"><
   <div class="box d">
    <a href='DNDManager/Dnd5Manager.htm'>The Dungeons & Dragons 5th Edition Single Encounter Manager</a>
   </div>

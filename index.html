@@ -67,12 +67,16 @@
     grid-row:2;
     width: 270px;
    }
+      
+.p {grid-column:2;
+    grid-row:3;
+    float: right;
+    shape-outside: polygon(0% 91%, 2% 62%, 30% 53%, 29% 0%, 0% 0%);;(0% 91%, 2% 62%, 30% 53%, 29% 0%, 0% 0%);
+   }         
 
 .q {grid-column:2;
     grid-row:3;
-    float: left;
     clip-path: polygon(1% 91%, 2% 61%, 26% 54%, 34% 48%, 29% 36%, 30% 14%, 48% 6%, 65% 12%, 71% 33%, 65% 49%, 72% 55%, 95% 64%, 96% 93%);
-    shape-outside: polygon(0% 91%, 2% 62%, 30% 53%, 29% 0%, 0% 0%);;(0% 91%, 2% 62%, 30% 53%, 29% 0%, 0% 0%);
    }      
       
 @font-face
@@ -125,11 +129,12 @@ p:first-of-type:first-letter
   <div class="box f">
    <a href='https://www.fxnetworks.com'>FX</a> Source: <p>FX is an American pay television channel owned by the Walt Disney Television unit of The Walt Disney Company through FX Networks, LLC. It is based at the 20th Century Fox lot in Century City, California. </p>
   </div>
-  <div class="box q">
+  <div class="p">
    A good practice is to define the clip-path and shape-outside properties in your text editor first, then go to the webpage and use the developer tools to define the path. This way you can get instant feedback on the coordinates you enter, making the process that much easier.
-
-The best way to really test your knowledge to see if you really understand this concept is to practice! Pick an image, float it in one direction, throw a background colour on the image, mock up some lorem ipsum on the page, and get to clipping!<img src="Clip.png"> 
- </div> 
+  </div>   
+  <div class="box q">
+   <img src="Clip.png"> 
+  </div> 
 </div>
 
  </body>

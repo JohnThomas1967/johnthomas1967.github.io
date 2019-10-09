@@ -89,13 +89,6 @@ body
 
 img
  {
-  background: repeating-linear-gradient
-   (45deg,
-    #eed202,
-    #eed202 10px,
-    #000000 10px,
-    #000000 20px
-   );     
   border : 0 ;
   float : left ;
   margin : 5px 5px 5px 5px ; 
@@ -103,7 +96,14 @@ img
  }
 
 p:first-of-type:first-letter
-   {box-shadow: 0 0 10px -2px black;
+   {background: repeating-linear-gradient
+   (45deg,
+    #eed202,
+    #eed202 10px,
+    #000000 10px,
+    #000000 20px
+   );  
+    box-shadow: 0 0 10px -2px black;
     font-size: 50px;
     font-family: 'Matrix';
     font-variation-settings: 'wght' 375, 'inli' 88;

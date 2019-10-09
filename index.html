@@ -69,14 +69,15 @@
    }
       
 .q {
+    position: absolute;
     left: 200px;
-    clip-path: circle();
+    top: 400px; 
+ 
     grid-column:2;
     grid-row:2;
-    position: absolute;
-    shape-outside: circle();
-    top: 500px;
-    width: 270px;
+
+    clip-path: polygon(0% 0%, 70% 0%, 70% 25%, 100% 55%, 100% 100%, 0% 100%);
+    shape-outside: polygon(0% 0%, 70% 0%, 70% 25%, 100% 55%, 100% 100%, 0% 100%);
    }      
       
 @font-face
@@ -119,9 +120,6 @@ p:first-of-type:first-letter
      Your browser does not support the audio element.
    </audio>
   </div>
-  <div class="box q">
-   <p>John Q. Titor</p><img src='Clip.jpg'>
-  </div>	
  <div class="box c">
   <div class="box d">
    <a href='DNDManager/Dnd5Manager.htm'>The Dungeons & Dragons 5th Edition Single Encounter Manager</a>
@@ -133,6 +131,9 @@ p:first-of-type:first-letter
    <a href='https://www.fxnetworks.com'>FX</a> Source: <p>FX is an American pay television channel owned by the Walt Disney Television unit of The Walt Disney Company through FX Networks, LLC. It is based at the 20th Century Fox lot in Century City, California. </p>
   </div>
   </div> 
+  <div class="box q">
+   <p>John Q. Titor</p><img src='Clip.jpg'>
+  </div>	 
 </div>
 
  </body>

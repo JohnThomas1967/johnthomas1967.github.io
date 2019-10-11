@@ -38,16 +38,27 @@
 .c {background-color: #A9A9A9;
     display: grid;
     grid-column:1;
-    grid-row:1 / span 2;
+    grid-row:4 / span 2;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
     width: 610px;
    }
-
+      
 .d {grid-column:1 / span 2;
     grid-row:1;
     width: 570px;
    }
+     
+.hazTape
+  {background-image: repeating-linear-gradient(45deg,
+                     transparent,
+                     #eed202 20px,
+                     black 20px,
+                     black 40px);
+   grid-column:1;
+   grid-row:2;
+   width: 30px;
+  }      
 
 .e {grid-column:1;
     grid-row:2;
@@ -63,17 +74,6 @@
     width: 300px;
     z-index: 2;
    }
-      
-.hazTape
-  {background-image: repeating-linear-gradient(45deg,
-                     transparent,
-                     #eed202 20px,
-                     black 20px,
-                     black 40px);
-   grid-column:2 / span 3;
-   grid-row:1;
-   width: 30px;
-  }
       
 @font-face
  {font-family: "Matrix"; src: url("Matrix.ttf") format("truetype")}      

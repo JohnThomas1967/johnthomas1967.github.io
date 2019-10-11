@@ -43,7 +43,6 @@
        margin : 5px 5px 5px 15px ; 
        padding: 5px 5px 5px 15px ;
        clip-path: polygon(51.14% 151px, 45.91% 91.48%, 3.59% 85.30%, 48px 0.46%); 
-    shape-outside: polygon(50.05% 172px, 45.28% 89.62%, 2.03% 82.11%, 50px 5.24%);   
        text-shadow : 2px 8px 6px rgba(0,0,0,0.2),
                      0px -5px 35px rgba(255,255,255,0.3);
       } 
@@ -52,7 +51,6 @@
     display: grid;
     grid-column:1;
     grid-row:2;
-    shape-outside: polygon(50.05% 172px, 45.28% 89.62%, 2.03% 82.11%, 50px 5.24%);   
     width: 610px;
    }
       
@@ -75,7 +73,6 @@
 .e {grid-column:1;
     grid-row:2;
     transform: rotate(5deg);
-    shape-outside: polygon(50.05% 172px, 45.28% 89.62%, 2.03% 82.11%, 50px 5.24%);  
     z-index: 1;
    }
       
@@ -88,14 +85,7 @@
 .g {grid-column:1;
     grid-row:3;
     text-align: center;
-     shape-outside: polygon(50.05% 172px, 45.28% 89.62%, 2.03% 82.11%, 50px 5.24%);  
-    }      
-
-.shapeit {grid-column:1;
-          grid-row:2;
-          z-index: 3;
-     shape-outside: polygon(50.05% 172px, 45.28% 89.62%, 2.03% 82.11%, 50px 5.24%);  
-         }          
+   }      
       
 @font-face
  {font-family: "Matrix"; src: url("Matrix.ttf") format("truetype")}      
@@ -127,9 +117,11 @@ p:first-of-type:first-letter
   <div class="box c">
 <div class="hazTape"></div>
 <div class="box d">John Q. Titor</div>
-<div class="box e"><img src="Joker.png">Joker is a 2019 American psychological thriller film directed by Todd Phillips who co-wrote the screenplay </div>
-<div class="box2 f">Joker is a 2019 American psychological thriller film directed by Todd Phillips who co-wrote the screenplay </div>Joker is a 2019 American psychological thriller film directed by Todd Phillips who co-wrote the screenplay 
- <p class="shapeit">Joker is a 2019 American psychological thriller film directed by Todd Phillips who co-wrote the screenplay with Scott Silver. The film, based on DC Comics characters, stars Joaquin Phoenix as the Joker. There are so many real life parallels that it's funny because it's true.</p>
+   <div class="box e">
+    <img src="Joker.png">
+   </div>
+   <div class="box2 f"></div>
+    <p>Joker is a 2019 American psychological thriller film directed by Todd Phillips who co-wrote the screenplay with Scott Silver. The film, based on DC Comics characters, stars Joaquin Phoenix as the Joker. There are so many real life parallels that it's funny because it's true.</p>   
   <div class="box g">
    <a href='DNDManager/Dnd5Manager.htm'>The Dungeons & Dragons 5th Edition Single Encounter Manager</a>
  </div>    

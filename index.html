@@ -63,7 +63,10 @@
     z-index: 2;
    }
       
-.hazTape {background-image: repeating-linear-gradient(45deg,
+.hazTape {
+     grid-column:2 / span 2;
+    grid-row:1;
+ background-image: repeating-linear-gradient(45deg,
           transparent,
           #eed202 20px,
           black 20px,
@@ -101,12 +104,11 @@ p:first-of-type:first-letter
 <body>
  <div class="wrapper">
   <div class="box c">
-   <div class="hazTape"></div>
-    <div class="box d">
-     <a href='DNDManager/Dnd5Manager.htm'>The Dungeons & Dragons 5th Edition Single Encounter Manager</a></div>
- <div class="box f"></div><p>Kate Kane / Batwoman makes her live-action debut in The CW's Arrowverse, portrayed by Ruby Rose; who was cast in the role in August 2018. The character first appears in the 2018 crossover event "Elseworlds" with Arrow, The Flash, and Supergirl.</p>
- <div class="box e"><img src="BatWoman.jpg"></div>
-   </div>
+<div class="hazTape"></div>
+<div class="box d"><a href='DNDManager/Dnd5Manager.htm'>The Dungeons & Dragons 5th Edition Single Encounter Manager</a></div>
+<div class="box e"><img src="BatWoman.jpg"></div>
+<div class="box f"><p>Kate Kane / Batwoman makes her live-action debut in The CW's Arrowverse, portrayed by Ruby Rose; who was cast in the role in August 2018. The character first appears in the 2018 crossover event "Elseworlds" with Arrow, The Flash, and Supergirl.</p>
+    </div>
   </div>   
  </div>
 

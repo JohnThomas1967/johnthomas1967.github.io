@@ -48,7 +48,7 @@
 .c {background-color: #A9A9A9;
     display: grid;
     grid-column:1;
-    grid-row:3 / span 2;
+    grid-row:1 / span 2;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
     width: 610px;
@@ -59,9 +59,14 @@
     width: 570px;
    }
 
-.e {transform: rotate(5deg);}
+.e {grid-column:1;
+    grid-row:2;
+    transform: rotate(5deg);
+   }
       
 .f {float: right;
+    grid-column:1;
+    grid-row:2;
     shape-outside: polygon(0% 0%, 40% 0%, 29% 27%, 33% 53%, 28% 76%, 33% 100%, 0% 100%);
    }
       

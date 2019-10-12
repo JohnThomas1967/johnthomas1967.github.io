@@ -2,9 +2,16 @@
 <html>
  <head>
   <style>
+   div.a{position: relative;z-index:1}
+   div.b{position: absolute;z-index:2}
   </style>  
  </head>   
  <body>
-  <img src="Joker.png"> 
+  <div class="a">
+  <img src="Joker.png">
+  <div>
+  <div class="b">
+  Some text.
+  </div> 
  </body>  
 </html>

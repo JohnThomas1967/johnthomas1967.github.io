@@ -1,20 +1,53 @@
 <html>
 <head>
 <style>
- div.wrapper{z-index:0; display: grid; grid-row:2;}
- .shapeit{shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);}
- div.a{color:white;font-size:17px;position: absolute;text-shadow: 2px 2px grey; z-index:1;}
- div.b{position: absolute; z-index=2;} 
+/* Repeat 6 1fr rows named "row" and 6 1fr columns named "col" */
+.grid-container {
+    display: grid;
+    grid-template: repeat(6, [row] 1fr) / repeat(6, [col] 1fr);
+    grid-gap: 20px;
+}
+
+.item-1 {
+    grid-column: col 1 / span 3;
+    grid-row: row 1 / span 2;
+    z-index: 3;
+}
+
+.item-2 {
+    grid-column: col 3 / span 4;
+    grid-row: row 2 / span 3;
+    z-index: 3;
+}
+
+.item-3 {
+    grid-column: col 5 / span 2;
+    grid-row: row 1 / span 5;
+    z-index: 3;
+}
+
+.item-4 {
+    grid-column: col 2;
+    grid-row:  row 2 / span 4;
+    z-index: 2;
+}
+
+.item-5 {
+    grid-column: col 1 / span 3;
+    grid-row: row 4 / span 3;
+    z-index: 1;
+}
+
+.item-6 {
+    grid-column: col 4 / span 3;
+    grid-row: row 5 / span 2;
+    z-index: 4;
+}
 </style>
 </head>
 <body>
- <div class="wrapper">
-   <p class="shapeit></p>
-<div class="a">
-
-"Joker" centers around the iconic arch nemesis and is an original, standalone fictional story not seen before on the big screen. Phillips' exploration of Arthur Fleck, who is indelibly portrayed by Joaquin Phoenix, is of a man struggling to find his way in Gotham's fracturedsociety. A clown-for-hire by day, he aspires to be a stand-up comic at night...but finds the joke always seems to be on him. Caught in a cyclical existence between apathy and cruelty, Arthur makes one bad decision that brings about a chain reaction of escalating events in this gritty character study. 
-  </div> 
-<div class="b"><img src="Joker.png"></div>
- </div>
+ <div class="item-2">Arthur Fleck (Joaquin Phoenix) is an unsuccessful clown and an even more unsuccessful stand-up comedian. As he attempts to simply exist in a broken-down and beaten-up Gotham City, a sequence of violent events will lead to a revolt in the city and the birth of the Joker.
+By Terri White</div>
+ <div class="item-3"><img src="Joker.png"></div>
 </body>
 </html>

@@ -8,124 +8,24 @@
       href='cereal.ico'
     >
      <style type="text/css">
-
-      a:link {color: #000000;}      
-      a:hover {color: #400000;}
-      a:active {color: #bf0000;}
-      a:visited {color: #ff0000;}
-      
-.wrapper {
-  display: grid;
-  grid-gap: 5px;
+.some-shape {
+  margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  background-color: #59d1f2;
+  shape-outside: circle();
+  clip-path: circle();
+  float: left;
 }
-
-.box {box-shadow : 0px 0px 20px black ;
-      border-width : 10px ;
-      color : white ;
-      font-family : Arial ;
-      font-size : 18px ;
-      height : inherit ;  
-      line-height : 30px ;
-      margin : 5px 5px 5px 15px ; 
-      padding: 5px 5px 5px 15px ;
-      text-shadow : 2px 8px 6px rgba(0,0,0,0.2),
-                    0px -5px 35px rgba(255,255,255,0.3);
-     }
-
-.box2 {background: rgba(0, 0, 0, 0.4);
-       box-shadow : 0px 0px 20px black ; 
-       border-width : 10px ;
-       color : white ;
-       font-family : Arial ;
-       font-size : 18px ;
-       height : inherit ;
-       line-height : 30px ;
-       margin : 5px 5px 5px 15px ; 
-       padding: 5px 5px 5px 15px ;
-       clip-path: polygon(51.14% 151px, 45.91% 91.48%, 3.59% 85.30%, 48px 0.46%); 
-       text-shadow : 2px 8px 6px rgba(0,0,0,0.2),
-                     0px -5px 35px rgba(255,255,255,0.3);
-      } 
-     
-.c {background-color: #A9A9A9;
-    display: grid;
-    grid-column:1;
-    grid-row:2;
-    width: 610px;
-   }
-      
-.d {grid-column:1;
-    grid-row:1;
-    text-align: center;
-    }
-     
-.hazTape
-  {background-image: repeating-linear-gradient(45deg,
-                     transparent,
-                     #eed202 20px,
-                     black 20px,
-                     black 40px);
-   grid-column:1;
-   grid-row:1 / span 3;
-   width: 30px;
-  }      
-
-.e {grid-column:1;
-    grid-row:2;
-    transform: rotate(5deg);
-    z-index: 1;
-   }
-      
-.f {grid-column:1;
-    grid-row:2;
-    z-index: 2;
-   }
-
-.g {grid-column:1;
-    grid-row:3;
-    text-align: center;
-   }      
-      
-@font-face
- {font-family: "Matrix"; src: url("Matrix.ttf") format("truetype")}      
-
-body
- {
-  font-family : 'Arial' ;
- }
-
-img
- {
-  border : 0 ;
-  margin : 5px 5px 5px 5px ; 
-  padding: 5px 5px 5px 5px ;
- }
-
-.shapeit {  width: 230px;
-  height: 230px;
-  shape-outside: circle(30%);
-  float: left;}
      
      </style>
   </head>
 <body>
- 
-<div class="wrapper">
-  <div class="box c">
-<div class="hazTape"></div>
-<div class="box d">John Q. Titor</div>
-   <div class="box e">
-    <img src="Joker.png">
-   </div>
-   <div class="box2 f">
-  </div>
-   <p class="shapeit">Joker is a 2019 American psychological thriller film directed by Todd Phillips who co-wrote the screenplay with Scott Silver. The film, based on DC Comics characters, stars Joaquin Phoenix as the Joker. There are so many real life parallels that it's funny because it's true.   
-</p>
- Joker is a 2019 American psychological thriller film directed by Todd Phillips who co-wrote the screenplay with Scott Silver. The film, based on DC Comics characters, stars Joaquin Phoenix as the Joker. There are so many real life parallels that it's funny because it's true.     
-  <div class="box g">
-   <a href='DNDManager/Dnd5Manager.htm'>The Dungeons & Dragons 5th Edition Single Encounter Manager</a>
- </div>    
-  </div>   
- </div>
+<div class="some-shape"></div>
+<div>
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue dignissim tortor, a vestibulum orci blandit ac. Sed interdum nec sem sit amet consectetur. Vestibulum auctor, risus vitae lacinia elementum, nisi tellus porttitor arcu, vel porta leo felis in augue. Duis laoreet tortor at luctus porttitor. Nulla bibendum neque id est pharetra sagittis. Sed bibendum urna erat, vitae laoreet risus volutpat et. Nunc pharetra risus aliquam arcu pellentesque rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+ <p>Donec ut convallis lacus. Vestibulum blandit sem leo, non tempus est fringilla ac. Nunc scelerisque maximus tortor, eu pulvinar neque placerat quis. Vestibulum fringilla scelerisque tristique. Nulla facilisi. Duis sed sapien id ligula interdum semper. Praesent auctor erat condimentum elit venenatis fringilla. Aliquam fermentum mattis massa, quis vulputate turpis convallis sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed dignissim massa at leo dignissim, eget varius lacus finibus.</p>
+</div>
   </body>
 </html>

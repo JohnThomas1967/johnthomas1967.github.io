@@ -11,7 +11,7 @@ body {
         display: grid;
     gap: 10px;
         grid-template-columns: 150px 100px 150px 100px ;
-        grid-template-rows: repeat(3,minmax(100px,auto));
+        grid-template-rows: repeat(1,minmax(100px,auto));
         background-color: #fff;
         color: #444;
     }
@@ -22,7 +22,6 @@ body {
         border-radius: 5px;
         padding: 20px;
         font-size: 150%;
-
     }
 
     .box .box {
@@ -38,10 +37,10 @@ body {
         grid-column: 4 ;
     }
 
-    .c {
-      grid-column: 1;
-    grid-row: 2 / 2;
-    }
+    .c {clip-path: polygon(100% 0, 0 0, 0 100%);
+        grid-column: 1;
+        grid-row: 2;
+       }
   
     .ca {
       grid-column: 1;

@@ -4,7 +4,11 @@
 
 a:link, a:hover, a:active, a:visited{color:c37f2a;}   
 
-body {background-color:white; color:white; text-shadow: 2px 2px 4px #000000;}
+body {
+   display: grid;
+   grid-gap: 10px;
+   grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+background-color:white; color:white; text-shadow: 2px 2px 4px #000000;}
 
 .hs {border-color: #c37f2a;
      color: #f5c103;

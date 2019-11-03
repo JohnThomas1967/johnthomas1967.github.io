@@ -72,14 +72,45 @@ h1, h2, h3 {border-width:1px; border-color:c37f2a; color:f5c103}
   right: 0;
 }
 
+.module {
+  background: white;
+  border: 1px solid #ccc;
+  margin: 3%;
+  > h2 {
+    padding: 1rem;
+    margin: 0 0 0.5rem 0;
+  }
+  > p {
+    padding: 0 1rem;
+  }
+}
+
+.stripe-2 {
+  color: black;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    #ccc 10px,
+    #ccc 20px
+  ),
+  linear-gradient(
+    to bottom,
+    #f5c103,
+    #000000
+  )
+}
+
   </style> 
  </head>
 <body>
-
+<div class="module">
+  <h2 class="stripe-2">Gradient Stripes</h2>
+ </div> 
  <div class="wrapper">
   <div class="box header"><h1>1 7 8</h1></div>
   <div class="box sidebar">
-    <a href="https://johntitor2063.github.io/DNDManager/Dnd5Manager.htm" /> The D&D 5th Edition Single Encounter Game</a>
+    <a href="https://johntitor2063.github.io/DNDManager/Dnd5Manager.htm" />The D&D 5th Edition Single Encounter Game</a>
   </div>
   <div class="box content"><h3>The Wendol Mother</h3>
    <img src="https://johntitor2063.github.io/WendolMother.png"><br>

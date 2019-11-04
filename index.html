@@ -2,14 +2,52 @@
  <head>
   <style>
 
-a:link, a:hover, a:active, a:visited{color:c37f2a;}   
+a:link,
+a:hover,
+a:active,
+a:visited
+{color:c37f2a;}   
 
-body {
-   display: grid;
-   grid-gap: 10px;
-   grid-template-columns: repeat(auto-fill, minmax(500px,1fr));
-background-color:white; color:white; text-shadow: 2px 2px 4px #000000;}
+body 
+{
+background-color:white;
+color:white;  
+display: grid;
+grid-gap: 10px;
+grid-template-columns: repeat(auto-fill, minmax(500px,1fr));
+text-shadow: 2px 2px 4px #000000;
+}
 
+.box
+{
+background-color: #444;
+border-radius: 5px;    
+color: #fff;
+font-size: 150%; 
+padding: 50px;
+}
+   
+.content {
+  grid-area: content;
+  position: relative;
+}   
+.footer {
+  grid-area: footer;
+}
+.footerImg{   
+  clip-path: circle(70.44% at 49.58% -652.83%);
+   }
+
+.footerText{   
+  shape-outside: circle(70.44% at 49.58% -652.83%);  
+   }      
+.header {
+  grid-area: header;
+}   
+.header,
+.footer {
+  background-color: #999;
+}
 .hs {border-color: #c37f2a;
      color: #f5c103;
      font-size: xxx-large;
@@ -18,60 +56,6 @@ background-color:white; color:white; text-shadow: 2px 2px 4px #000000;}
 .sidebar {
   grid-area: sidebar;
 }
-
-.content {
-  grid-area: content;
-  position: relative;
-}
-
-.header {
-  grid-area: header;
-}
-
-.footer {
-  grid-area: footer;
-}
-
-.wrapper {
-        display: grid;
-    grid-gap: 10px;
-        grid-template-areas:
-    "header  header  header"
-        "sidebar content content"
-        "footer  footer  footer";
-        background-color: #fff;
-        color: #444;
-    }
-
-
-.box {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-  padding: 50px;
-  font-size: 150%;
-}
-
-.header,
-.footer {
-  background-color: #999;
-}
-
-.footerImg{   
-  clip-path: circle(70.44% at 49.58% -652.83%);
-   }
-
-.footerText{   
-  shape-outside: circle(70.44% at 49.58% -652.83%);  
-   }   
-   
-.topleft {
-    position: absolute;
-    top: 0px;
-    left: 200px;
-    transform: rotate(15deg) scale(0.4,0.4);
-}
-
 .stripe-2 {
   color: black;
   background: repeating-linear-gradient(
@@ -87,8 +71,23 @@ background-color:white; color:white; text-shadow: 2px 2px 4px #000000;}
     #000000
   )
 }
-
-  </style> 
+.topleft {
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    transform: rotate(15deg) scale(0.4,0.4);
+}   
+.wrapper {
+        display: grid;
+    grid-gap: 10px;
+        grid-template-areas:
+    "header  header  header"
+        "sidebar content content"
+        "footer  footer  footer";
+        background-color: #fff;
+        color: #444;
+    }
+   </style> 
  </head>
 <body>
 

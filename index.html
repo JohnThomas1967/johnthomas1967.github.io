@@ -26,65 +26,86 @@ font-size: 150%;
 padding: 5px;
 }
    
-.content {
-  grid-area: content;
-  position: relative;
+.content
+{
+grid-area: content;
+position: relative;
 }   
-.footer {
-  grid-area: footer;
-}
-.footerImg{   
-  clip-path: circle(70.44% at 49.58% -652.83%);
-   }
 
-.footerText{   
-  shape-outside: circle(70.44% at 49.58% -652.83%);  
-   }      
-.header {
-  grid-area: header;
+.footer 
+{
+grid-area: footer;
+}
+
+.footerImg
+{   
+clip-path: circle(70.44% at 49.58% -652.83%);
+}
+
+.footerText
+{   
+shape-outside: circle(70.44% at 49.58% -652.83%);  
+}      
+
+.header
+{
+grid-area: header;
 }   
+
 .header,
-.footer {
-  background-color: #999;
+.footer
+{
+background-color: #999;
 }
-.hs {border-color: #c37f2a;
-     color: #f5c103;
-     font-size: xxx-large;
-    }
 
-.sidebar {
-  grid-area: sidebar;
+.hs
+{
+border-color: #c37f2a;
+color: #f5c103;
+font-size: xxx-large;
 }
-.stripe-2 {
-  color: black;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    #000000 10px,
-    #000000 20px
-  ),
-  linear-gradient(
-    to bottom,
-    #f5c103,
-    #000000
-  )
+
+.sidebar
+{
+grid-area: sidebar;
 }
-.topleft {
-    position: absolute;
-    top: 0px;
-    left: 200px;
-    transform: rotate(15deg) scale(0.4,0.4);
+
+.stripe-2
+{
+color: black;
+background: repeating-linear-gradient(
+45deg,
+transparent,
+transparent 10px,
+#000000 10px,
+#000000 20px
+),
+linear-gradient(
+to bottom,
+#f5c103,
+#000000
+)
+}
+
+.topleft
+{
+position: absolute;
+top: 0px;
+left: 200px;
+transform: rotate(15deg) scale(0.4,0.4);
 }   
-.wrapper {
-        display: grid;
-    grid-gap: 10px;
-        grid-template-areas:
-    "header  header  header"
-        "sidebar content content"
-        "footer  footer  footer";
-    }
-   </style> 
+
+.wrapper
+{
+display: grid;
+grid-gap: 10px;
+grid-template-areas:
+"header  header  header"
+"sidebar content content"
+"footer  footer  footer";
+}
+
+  </style> 
  </head>
 <body>
 

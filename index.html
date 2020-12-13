@@ -24,11 +24,6 @@ grid-template-columns: repeat(auto-fill, minmax(500px,1fr));
 text-shadow: 2px 2px 4px #000000;
 }
 
-img
-{
-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);  
-}
-
 .box
 {
 background-color: #4c4c4c;
@@ -49,6 +44,11 @@ position: relative;
 grid-area: footer;
 }
 
+.ImgPanel
+{
+clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);  
+}   
+   
 .ImgText
 {   
 clip-path: polygon(0% 0%, 40% 0, 41% 68%, 100% 100%, 0 100%);
@@ -118,15 +118,16 @@ grid-template-areas:
    <div class="box content">
     <span class="hs">The Entire Wall</span>
      <br>
-      <img
-        src="110MicroLEDVerge.png"
-        alt="Samsung 4K 110inch MicroLED"
-      >
-     <span class='ImgText'>
-       The Verge reports that Samsung has a new gigantic monitor that nearly covers your wall. Imagine playing PlayStation 5 on one of these!
-     </span> 
-   </div>
-  
+      <div class="ImgPanel">
+       <img
+         src="110MicroLEDVerge.png"
+         alt="Samsung 4K 110inch MicroLED"
+       >
+       <span class='ImgText'>
+         The Verge reports that Samsung has a new gigantic monitor that nearly covers your wall. Imagine playing PlayStation 5 on one of these!
+        </span> 
+    </div>
+    <div>
    <div class="box sidebar">
     <a href="https://johntitor2063.github.io/DNDManager/Dnd5Manager.htm" />The D&D 5th Edition Single Encounter Game</a>
    </div>

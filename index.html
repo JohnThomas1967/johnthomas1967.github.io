@@ -16,20 +16,20 @@ a:visited
    
 body 
 {
-background-color: white;
-font-family: "Comic Sans";
-text-shadow: 2px 2px 4px #000000;
-}
-
-.box
-{
 background-color: #4c4c4c;
 border-radius: 5px;    
 color: #ffffff;
-font-size: 150%; 
+font-family: "Comic Sans"; 
 padding: 5px;
+text-shadow: 2px 2px 4px #000000;
 }
 
+.ComicTitle
+{
+color: #f5c103;
+font-family: "Badaboom"; 
+}   
+   
 .ImgPanel
 {
 clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
@@ -47,20 +47,6 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%)
  transition: 0.5s ease;
  overflow: hidden; 
  shape-outside: polygon(31% 0, 100% 0%, 100% 100%, 32% 100%);
-}
-  
-.ComicTitle
-{
-border-color: #c37f2a;
-color: #f5c103;
-float:right;
-font-size: xxx-large;
-font-family: "Badaboom"; 
-}
-  
-.sidebar
-{
-grid-area: sidebar;
 }
 
 .stripe-2
@@ -83,18 +69,19 @@ to bottom,
   </style> 
  </head>
 <body>
- <div class="box ComicTitle"><span class="box stripe-2">John Titor Fan</span>The Entire Wall
-  <p>
-   <div class="box ImgText"> 
-     The Verge reports that Samsung has a new gigantic monitor that nearly covers your wall. Imagine playing PlayStation 5 on one of these!
-   </div>
-     <div class="box ImgPanel">
-    <img
-      src="110MicroLEDVerge.png"
-      alt="Samsung 4K 110inch MicroLED"
-    >
-   <div> 
-   <div class="box sidebar">
+ <div class="ComicTitle"><span class="stripe-2">John Titor Fan</span>
+ 
+  <div class="ImgPanel">
+   <img
+     src="110MicroLEDVerge.png"
+     alt="Samsung 4K 110inch MicroLED"
+   >
+  <div>
+  
+  <div class="ImgText"> 
+    The Verge reports that Samsung has a new gigantic monitor that nearly covers your wall. Imagine playing PlayStation 5 on one of these!
+  </div>
+  <div class="ComicTitle stripe-2">
     <a href="https://johntitor2063.github.io/DNDManager/Dnd5Manager.htm" />The D&D 5th Edition Single Encounter Game</a>
    </div>
 

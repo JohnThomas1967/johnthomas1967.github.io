@@ -46,8 +46,21 @@ grid-area: footer;
 
 .ImgPanel
 {
-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);  
-shape-outside: polygon(31% 0, 100% 0%, 100% 100%, 32% 100%);
+clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.ImgText
+{
+ background-color: rgba(96, 41, 169, 0.7); 
+ bottom: 0;
+ left: 0;
+ opacity: 0;
+ position: absolute;
+ right: 0;
+ top: 0;
+ transition: 0.5s ease;
+ overflow: hidden; 
+ shape-outside: polygon(31% 0, 100% 0%, 100% 100%, 32% 100%);
 }
   
 .header
@@ -115,7 +128,10 @@ grid-template-areas:
        <img
          src="110MicroLEDVerge.png"
          alt="Samsung 4K 110inch MicroLED"
-       >The Verge reports that Samsung has a new gigantic monitor that nearly covers your wall. Imagine playing PlayStation 5 on one of these!
+       >
+      <div class="ImgText"> 
+        The Verge reports that Samsung has a new gigantic monitor that nearly covers your wall. Imagine playing PlayStation 5 on one of these!
+      </div>  
    </div>
    <div class="box sidebar">
     <a href="https://johntitor2063.github.io/DNDManager/Dnd5Manager.htm" />The D&D 5th Edition Single Encounter Game</a>
